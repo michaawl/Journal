@@ -3,3 +3,7 @@ https://create-react-app.dev/
 
 Tutorials:
 https://www.youtube.com/watch?v=50cJ6WQMquU&list=PLkZU2rKh1mT8cML
+
+
+potential Frameworks to use for Styling: tailwindcss, daisyui 
+request handling: axios
