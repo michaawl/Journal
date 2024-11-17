@@ -29,7 +29,9 @@ function createMainWindow() {
 
 app.whenReady().then(createMainWindow)
 
-ipcMain.on('submit:todoform', (event, values) => {
+
+
+ipcMain.on('submit:todoForm', (event, values) => {
     console.log('Received values in main process:', values);
     // Handle the form submission logic here.
 });
