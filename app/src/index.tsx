@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import { Layout } from './components/Layout'
 import { Work } from './pages/Work'
+import { Calendar } from './pages/Calendar'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,8 +15,9 @@ root.render(
   <React.StrictMode>
     <HashRouter>
         <Routes>
-          <Route path='/' element={<Layout/>}>
+          <Route path='/' element={<Layout/>}>WF
             <Route path='/work' element={<Work/>} />
+            <Route path='/calendar' element={<Calendar/>} />
           </Route>
         </Routes>
       </HashRouter>

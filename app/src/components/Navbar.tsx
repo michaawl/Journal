@@ -14,6 +14,9 @@ export const NavBar: React.FC = () => {
           <li>
             <Link to="/work">List</Link>
           </li>
+          <li>
+            <Link to="/calendar">Calendar</Link>
+          </li>
         </ul>
       </div>
     </div>
