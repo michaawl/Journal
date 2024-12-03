@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import { Layout } from './components/Layout'
 import { Work } from './pages/Work'
 import { Calendar } from './pages/Calendar'
+import { JournalEntry } from './pages/JournalEntry'
+import { Statistics } from './pages/Statistics'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,9 +17,11 @@ root.render(
   <React.StrictMode>
     <HashRouter>
         <Routes>
-          <Route path='/' element={<Layout/>}>WF
-            <Route path='/work' element={<Work/>} />
-            <Route path='/calendar' element={<Calendar/>} />
+            <Route path='/' element={<Layout/>}>
+            <Route index element={<Calendar />} /> 
+            <Route path='/statistics' element={<Statistics/>} />
+            <Route path='/settings' element={<Work/>} />
+            <Route path="/journalEntry" element={<JournalEntry />} />
           </Route>
         </Routes>
       </HashRouter>
