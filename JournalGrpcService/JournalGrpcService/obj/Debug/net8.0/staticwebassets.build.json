@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "vN7pmYH7/n/zZWEc/5kHRViaLNRLBxkVJRCp/jnyzbE=",
+  "Source": "JournalGrpcService",
+  "BasePath": "_content/JournalGrpcService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

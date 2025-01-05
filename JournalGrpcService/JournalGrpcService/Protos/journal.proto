@@ -1,0 +1,110 @@
+syntax = "proto3";
+
+option csharp_namespace = "JournalGrpcService";
+
+service Journal {
+
+  rpc GetJournalEntries(GetJournalEntriesRequest) returns (GetJournalEntriesReply);
+
+  rpc GetJournalEntry(GetJournalEntryRequest) returns (GetJournalEntryReply);
+
+  rpc PostJournalEntry(PostJournalEntryRequest) returns (PostJournalEntryReply);
+
+  rpc GetReflectionAnswers(GetReflectionAnswersRequest) returns (GetReflectionAnswersReply);
+
+  rpc GetReflectionQuestions(GetReflectionQuestionsRequest) returns (GetReflectionQuestionsReply);
+
+  rpc GetUsers(GetUsersRequest) returns (GetUsersReply);
+}
+
+// Journal Entries messages
+message GetJournalEntriesRequest {
+  int64 user_id = 1;
+}
+
+message GetJournalEntriesReply {
+  repeated JournalEntryReply entries = 1;
+}
+
+// Define JournalEntryReply
+message JournalEntryReply {
+  int64 entry_id = 1;       
+  string entry_title = 2;   
+  string entry_content = 3; 
+  string entry_date = 4;   
+}
+
+message GetJournalEntryRequest {
+  int64 entry_id = 1;
+}
+
+message GetJournalEntryReply {
+  string entry_title = 1;
+  string entry_content = 2;
+  string entry_date = 3;
+}
+
+message PostJournalEntryRequest {
+  int64 user_id = 1;
+  string entry_title = 2;
+  string entry_content = 3;
+}
+
+message PostJournalEntryReply {
+  string message = 1;
+}
+
+// Reflection Answers messages
+message GetReflectionAnswersRequest {
+  int64 user_id = 1;
+}
+
+message GetReflectionAnswersReply {
+  repeated ReflectionAnswerReply answers = 1;
+}
+
+message ReflectionAnswerReply {
+  int64 answer_id = 1;
+  int64 user_id = 2;
+  int64 question_id = 3;
+  string scheduled_date = 4;
+  string answer_date = 5;
+  string answer_content = 6;
+  bool is_completed = 7;
+}
+
+// Reflection Questions messages
+message GetReflectionQuestionsRequest {
+  int64 user_id = 1;
+}
+
+message GetReflectionQuestionsReply {
+  repeated ReflectionQuestionReply questions = 1;
+}
+
+message ReflectionQuestionReply {
+  int64 question_id = 1;
+  int64 user_id = 2;
+  string question_text = 3;
+  string schedule_type = 4;
+  string schedule_value = 5;
+  int64 created_at = 6;
+}
+
+// Users messages
+message GetUsersRequest {
+  int64 user_id = 1;
+}
+
+message GetUsersReply {
+  UserReply user = 1;
+}
+
+message UserReply {
+  int64 user_id = 1;
+  string username = 2;
+  string email = 3;
+  string created_at = 4;
+}
+
+
