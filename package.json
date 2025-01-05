@@ -16,8 +16,11 @@
   "author": "michaawl",
   "license": "ISC",
   "dependencies": {
+    "@improbable-eng/grpc-web": "^0.15.0",
     "electron": "^33.2.0",
     "formik": "^2.4.6",
+    "google-protobuf": "^3.21.4",
+    "grpc-web": "^1.5.0",
     "i": "^0.3.7",
     "react": "^18.3.1",
     "react-datepicker": "^7.5.0",
