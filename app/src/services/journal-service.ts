@@ -1,5 +1,5 @@
-const grpcWeb = require('./proto/journal_grpc_web_pb');
-const proto = require('./proto/journal_pb');
+const grpcWeb = require('../proto/journal_grpc_web_pb');
+const proto = require('../proto/journal_pb');
 
 class JournalService {
   private client: any;
@@ -8,11 +8,10 @@ class JournalService {
     this.client = new grpcWeb.JournalClient('https://localhost:7160');
   }
 
-  getJournalEntries(userId: number): Promise<any> {
+  async getJournalEntries(userId: number): Promise<any> {
     return new Promise((resolve, reject) => {
       const request = new proto.GetJournalEntriesRequest();
       request.setUserId(userId);
-
       this.client.getJournalEntries(request, {}, (err: any, response: any) => {
         if (err) {
           reject(err.message);

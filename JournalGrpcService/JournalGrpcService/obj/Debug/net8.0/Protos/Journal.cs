@@ -338,9 +338,6 @@ namespace JournalGrpcService {
     private static readonly pb::FieldCodec<global::JournalGrpcService.JournalEntryReply> _repeated_entries_codec
         = pb::FieldCodec.ForMessage(10, global::JournalGrpcService.JournalEntryReply.Parser);
     private readonly pbc::RepeatedField<global::JournalGrpcService.JournalEntryReply> entries_ = new pbc::RepeatedField<global::JournalGrpcService.JournalEntryReply>();
-    /// <summary>
-    /// A list of journal entries
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::JournalGrpcService.JournalEntryReply> Entries {
@@ -532,9 +529,6 @@ namespace JournalGrpcService {
     /// <summary>Field number for the "entry_id" field.</summary>
     public const int EntryIdFieldNumber = 1;
     private long entryId_;
-    /// <summary>
-    /// Unique ID of the journal entry
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long EntryId {
@@ -547,9 +541,6 @@ namespace JournalGrpcService {
     /// <summary>Field number for the "entry_title" field.</summary>
     public const int EntryTitleFieldNumber = 2;
     private string entryTitle_ = "";
-    /// <summary>
-    /// Title of the journal entry
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EntryTitle {
@@ -562,9 +553,6 @@ namespace JournalGrpcService {
     /// <summary>Field number for the "entry_content" field.</summary>
     public const int EntryContentFieldNumber = 3;
     private string entryContent_ = "";
-    /// <summary>
-    /// Content of the journal entry
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EntryContent {
@@ -577,9 +565,6 @@ namespace JournalGrpcService {
     /// <summary>Field number for the "entry_date" field.</summary>
     public const int EntryDateFieldNumber = 4;
     private string entryDate_ = "";
-    /// <summary>
-    /// Date of the journal entry
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EntryDate {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import JournalService from '../journal-service';
+import JournalService from '../services/journal-service';
 
 type JournalEntry = {
   entryId: number;
@@ -9,7 +9,7 @@ type JournalEntry = {
 };
 
 export const Statistics: React.FC = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false); //statehooks
   const [entries, setEntries] = useState<JournalEntry[]>([]);
   const [error, setError] = useState<string | null>(null);
 
@@ -40,16 +40,10 @@ export const Statistics: React.FC = () => {
       <button
         onClick={fetchJournalEntries}
         style={{
-          backgroundColor: 'yellow',
-          border: 'none',
-          padding: '10px 20px',
-          fontSize: '16px',
-          fontWeight: 'bold',
-          cursor: 'pointer',
-          borderRadius: '5px',
+          backgroundColor: 'yellow'
         }}
       >
-        {loading ? 'Loading...' : 'Fetch Journal Entries'}
+        {'Laden'}
       </button>
 
       {error && <p style={{ color: 'red' }}>Error: {error}</p>}

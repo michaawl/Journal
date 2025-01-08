@@ -10,7 +10,7 @@ interface IValues {
 }
 
 const validationSchema = Yup.object().shape({
-  description: Yup.string().required("Task description is required"),
+  description: Yup.string().required("error: must not be empty"),
 });
 
 interface ToDoFormProps {
@@ -24,7 +24,7 @@ export const ToDoForm: React.FC<ToDoFormProps> = ({ onAddTask }) => {
 
   const handleSubmit = (values: IValues, { resetForm }: any) => {
     onAddTask(values.description);
-    resetForm(); // Clear the form after submission
+    resetForm(); // für clear
   };
 
   return (
@@ -38,13 +38,13 @@ export const ToDoForm: React.FC<ToDoFormProps> = ({ onAddTask }) => {
           <Form className="shadow border rounded-xl p-4 my-4">
             <div className="my-4">
               <label htmlFor="description" className="font-bold">
-                Task description
+                Question
               </label>
               <Field
                 name="description"
                 id="description"
                 component={TextField}
-                placeholder="Enter the description"
+                placeholder="Enter question"
                 autoFocus
               />
               {errors.description && touched.description && (

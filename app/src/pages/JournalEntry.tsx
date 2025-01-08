@@ -10,7 +10,7 @@ export const JournalEntry: React.FC = () => {
     const [entry, setEntry] = useState('');
     
     const handleSave = () => {
-      console.log('Journal entry saved:', { title, entry });
+      //post or update! if previous empty -> post if otherwise -> update
     };
   
     return (
