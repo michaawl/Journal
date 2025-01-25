@@ -21,6 +21,7 @@ app.UseCors();
 app.UseGrpcWeb();
 
 app.MapGrpcService<JournalService>().EnableGrpcWeb();
+app.MapGrpcService<ReflectionService>().EnableGrpcWeb();
 app.MapGet("/", () => "This server is running. Use a gRPC client to communicate with gRPC endpoints.");
 
 app.Run();

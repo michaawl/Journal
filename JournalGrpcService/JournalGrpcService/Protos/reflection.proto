@@ -1,0 +1,97 @@
+syntax = "proto3";
+
+option csharp_namespace = "ReflectionGrpcService";
+
+// Reflection Service Definition
+service Reflection {
+  // Retrieves all reflection questions for a user
+  rpc GetReflectionQuestions(GetReflectionQuestionsRequest) returns (GetReflectionQuestionsReply);
+
+  // Retrieves a specific reflection question by its ID
+  rpc GetReflectionQuestionById(GetReflectionQuestionByIdRequest) returns (GetReflectionQuestionByIdReply);
+
+  // Retrieves an answer to a reflection question by question ID
+  rpc GetReflectionAnswerByQuestionId(GetReflectionAnswerByQuestionIdRequest) returns (GetReflectionAnswerByQuestionIdReply);
+
+  // Posts a new reflection question
+  rpc PostReflectionQuestion(PostReflectionQuestionRequest) returns (PostReflectionQuestionReply);
+
+  // Posts an answer to a reflection question
+  rpc PostReflectionAnswer(PostReflectionAnswerRequest) returns (PostReflectionAnswerReply);
+}
+
+// Request to get all reflection questions for a user
+message GetReflectionQuestionsRequest {
+  int64 user_id = 1; // User's unique ID
+}
+
+// Reply with a list of reflection questions
+message GetReflectionQuestionsReply {
+  repeated ReflectionQuestion questions = 1; // List of reflection questions
+}
+
+// Request to get a reflection question by its ID
+message GetReflectionQuestionByIdRequest {
+  int64 question_id = 1; // Reflection question's unique ID
+}
+
+// Reply with a reflection question
+message GetReflectionQuestionByIdReply {
+  ReflectionQuestion question = 1; // The reflection question
+}
+
+// Request to get an answer to a reflection question by question ID
+message GetReflectionAnswerByQuestionIdRequest {
+  int64 question_id = 1; // Reflection question's unique ID
+}
+
+// Reply with a reflection answer
+message GetReflectionAnswerByQuestionIdReply {
+  ReflectionAnswer answer = 1; // The reflection answer
+}
+
+// Request to post a new reflection question
+message PostReflectionQuestionRequest {
+  int64 user_id = 1;          // User's unique ID
+  string question_text = 2;   // The text of the question
+  string schedule_type = 3;   // Type of schedule (e.g., daily, weekly)
+  string schedule_value = 4;  // Schedule value (e.g., specific date/time)
+}
+
+// Reply for posting a reflection question
+message PostReflectionQuestionReply {
+  string message = 1; // Response message
+}
+
+// Request to post an answer to a reflection question
+message PostReflectionAnswerRequest {
+  int64 question_id = 1;       // Reflection question's unique ID
+  int64 user_id = 2;           // User's unique ID
+  string answer_content = 3;   // Content of the answer
+  string answer_date = 4;      // Date of the answer
+  bool is_completed = 5;       // Whether the reflection task is completed
+}
+
+// Reply for posting a reflection answer
+message PostReflectionAnswerReply {
+  string message = 1; // Response message
+}
+
+// Reflection Question message
+message ReflectionQuestion {
+  int64 question_id = 1;       // Unique ID of the question
+  int64 user_id = 2;           // User's unique ID
+  string question_text = 3;    // Text of the reflection question
+  string schedule_type = 4;    // Schedule type (e.g., daily, weekly)
+  string schedule_value = 5;   // Schedule value (e.g., specific date/time)
+}
+
+// Reflection Answer message
+message ReflectionAnswer {
+  int64 answer_id = 1;         // Unique ID of the answer
+  int64 question_id = 2;       // Related question's ID
+  int64 user_id = 3;           // User's unique ID
+  string answer_content = 4;   // Content of the answer
+  string answer_date = 5;      // Date of the answer
+  bool is_completed = 6;       // Whether the reflection task is completed
+}

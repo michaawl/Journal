@@ -12,10 +12,10 @@ export const NavBar: React.FC = () => {
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link to="/statistics">Statistics</Link>
+            <Link to="/statistics">Reflect!</Link>
           </li>
           <li>
-            <Link to="/settings">Settings</Link>
+            <Link to="/settings">Set Questions</Link>
           </li>
         </ul>
       </div>

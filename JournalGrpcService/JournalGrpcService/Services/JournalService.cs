@@ -37,12 +37,13 @@ namespace JournalGrpcService.Services
                             {
                                 reply.Entries.Add(new JournalEntryReply
                                 {
-                                    EntryId = reader.GetInt64(0), 
-                                    EntryTitle = reader.GetString(1), 
-                                    EntryContent = reader.GetString(2), 
-                                    EntryDate = reader.IsDBNull(3) ? "" : reader.GetDateTime(3).ToString("yyyy-MM-dd HH:mm:ss") 
+                                    EntryId = reader.GetInt32(0),  // Use GetInt32 for INT columns
+                                    EntryTitle = reader.GetString(1),
+                                    EntryContent = reader.GetString(2),
+                                    EntryDate = reader.IsDBNull(3) ? "" : reader.GetDateTime(3).ToString("yyyy-MM-dd HH:mm:ss")
                                 });
                             }
+
                         }
                     }
                 }
@@ -103,7 +104,19 @@ namespace JournalGrpcService.Services
         public override async Task<PostJournalEntryReply> PostJournalEntry(PostJournalEntryRequest request, ServerCallContext context)
         {
             string connectionString = "Server=localhost;Database=master;Integrated Security=true;";
-            string query = "INSERT INTO JournalEntries (user_id, entry_title, entry_content, entry_date) VALUES (@UserId, @EntryTitle, @EntryContent, @EntryDate)";
+            string query;
+
+            // Check if EntryId is greater than 0 to determine whether to update or insert
+            if (request.EntryId > 0)
+            {
+                // Update existing journal entry
+                query = "UPDATE JournalEntries SET entry_title = @EntryTitle, entry_content = @EntryContent, entry_date = @EntryDate WHERE entry_id = @EntryId";
+            }
+            else
+            {
+                // Insert new journal entry
+                query = "INSERT INTO JournalEntries (user_id, entry_title, entry_content, entry_date) VALUES (@UserId, @EntryTitle, @EntryContent, @EntryDate)";
+            }
 
             var reply = new PostJournalEntryReply();
 
@@ -116,37 +129,33 @@ namespace JournalGrpcService.Services
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@UserId", request.UserId);
+                        if (request.EntryId > 0)
+                        {
+                            // Parameters for UPDATE
+                            command.Parameters.AddWithValue("@EntryId", request.EntryId);
+                        }
+                        else
+                        {
+                            // Parameters for INSERT
+                            command.Parameters.AddWithValue("@UserId", request.UserId);
+                        }
+
                         command.Parameters.AddWithValue("@EntryTitle", request.EntryTitle);
                         command.Parameters.AddWithValue("@EntryContent", request.EntryContent);
-                        command.Parameters.AddWithValue("@EntryDate", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss"));
+                        command.Parameters.AddWithValue("@EntryDate", request.EntryDate ?? DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss"));
 
                         await command.ExecuteNonQueryAsync();
-                        reply.Message = "Journal entry created successfully.";
+                        reply.Message = request.EntryId > 0 ? "Journal entry updated successfully." : "Journal entry created successfully.";
                     }
                 }
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "An error occurred while creating a journal entry.");
+                _logger.LogError(ex, "An error occurred while posting the journal entry.");
                 reply.Message = $"Error: {ex.Message}";
             }
 
             return reply;
-        }
-
-
-        public override Task<GetReflectionAnswersReply> GetReflectionAnswers(GetReflectionAnswersRequest request, ServerCallContext context)
-        {
-            var reply = new GetReflectionAnswersReply();
-            return Task.FromResult(reply);
-        }
-
-
-        public override Task<GetReflectionQuestionsReply> GetReflectionQuestions(GetReflectionQuestionsRequest request, ServerCallContext context)
-        {
-            var reply = new GetReflectionQuestionsReply();
-            return Task.FromResult(reply);
         }
 
         public override Task<GetUsersReply> GetUsers(GetUsersRequest request, ServerCallContext context)

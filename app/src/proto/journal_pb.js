@@ -1231,7 +1231,9 @@ proto.PostJournalEntryRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     userId: jspb.Message.getFieldWithDefault(msg, 1, 0),
     entryTitle: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    entryContent: jspb.Message.getFieldWithDefault(msg, 3, "")
+    entryContent: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    entryDate: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    entryId: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
 
   if (includeInstance) {
@@ -1280,6 +1282,14 @@ proto.PostJournalEntryRequest.deserializeBinaryFromReader = function(msg, reader
       var value = /** @type {string} */ (reader.readString());
       msg.setEntryContent(value);
       break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setEntryDate(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setEntryId(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1327,6 +1337,20 @@ proto.PostJournalEntryRequest.serializeBinaryToWriter = function(message, writer
   if (f.length > 0) {
     writer.writeString(
       3,
+      f
+    );
+  }
+  f = message.getEntryDate();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 5));
+  if (f != null) {
+    writer.writeInt64(
+      5,
       f
     );
   }
@@ -1384,6 +1408,60 @@ proto.PostJournalEntryRequest.prototype.getEntryContent = function() {
  */
 proto.PostJournalEntryRequest.prototype.setEntryContent = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional string entry_date = 4;
+ * @return {string}
+ */
+proto.PostJournalEntryRequest.prototype.getEntryDate = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.PostJournalEntryRequest} returns this
+ */
+proto.PostJournalEntryRequest.prototype.setEntryDate = function(value) {
+  return jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional int64 entry_id = 5;
+ * @return {number}
+ */
+proto.PostJournalEntryRequest.prototype.getEntryId = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.PostJournalEntryRequest} returns this
+ */
+proto.PostJournalEntryRequest.prototype.setEntryId = function(value) {
+  return jspb.Message.setField(this, 5, value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.PostJournalEntryRequest} returns this
+ */
+proto.PostJournalEntryRequest.prototype.clearEntryId = function() {
+  return jspb.Message.setField(this, 5, undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.PostJournalEntryRequest.prototype.hasEntryId = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 

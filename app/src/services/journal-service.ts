@@ -37,13 +37,18 @@ class JournalService {
     });
   }
 
-  postJournalEntry(userId: number, title: string, content: string): Promise<any> {
+  postJournalEntry(userId: number, title: string, content: string, entryDate: string, entryId?: number): Promise<any> {
     return new Promise((resolve, reject) => {
       const request = new proto.PostJournalEntryRequest();
       request.setUserId(userId);
       request.setEntryTitle(title);
       request.setEntryContent(content);
-
+      request.setEntryDate(entryDate);
+  
+      if (entryId) {
+        request.setEntryId(entryId); // Only set if updating
+      }
+  
       this.client.postJournalEntry(request, {}, (err: any, response: any) => {
         if (err) {
           reject(err.message);
@@ -53,6 +58,7 @@ class JournalService {
       });
     });
   }
+  
 }
 
 export default JournalService;

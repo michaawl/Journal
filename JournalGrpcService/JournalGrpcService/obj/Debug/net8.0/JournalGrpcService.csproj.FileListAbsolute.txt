@@ -43,6 +43,13 @@ C:\Users\micha\Desktop\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\Jo
 C:\Users\micha\Desktop\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\JournalGrpcService.genruntimeconfig.cache
 C:\Users\micha\Desktop\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\ref\JournalGrpcService.dll
 C:\Users\micha\Desktop\JournalGrpcService\JournalGrpcService\bin\Debug\net8.0\Grpc.AspNetCore.Web.dll
+C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\JournalGrpcService.csproj.AssemblyReference.cache
+C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\JournalGrpcService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\JournalGrpcService.AssemblyInfoInputs.cache
+C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\JournalGrpcService.AssemblyInfo.cs
+C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\JournalGrpcService.csproj.CoreCompileInputs.cache
+C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\JournalGrpcService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\JournalGrpcService.sourcelink.json
 C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\bin\Debug\net8.0\appsettings.json
 C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\bin\Debug\net8.0\JournalGrpcService.staticwebassets.endpoints.json
@@ -65,13 +72,6 @@ C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\bin\Debug\n
 C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
 C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\bin\Debug\net8.0\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
 C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
-C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\JournalGrpcService.csproj.AssemblyReference.cache
-C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\JournalGrpcService.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\JournalGrpcService.AssemblyInfoInputs.cache
-C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\JournalGrpcService.AssemblyInfo.cs
-C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\JournalGrpcService.csproj.CoreCompileInputs.cache
-C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\JournalGrpcService.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\JournalGrpcService.sourcelink.json
 C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\scopedcss\bundle\JournalGrpcService.styles.css
 C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\micha\Desktop\Journal\JournalGrpcService\JournalGrpcService\obj\Debug\net8.0\staticwebassets.development.json

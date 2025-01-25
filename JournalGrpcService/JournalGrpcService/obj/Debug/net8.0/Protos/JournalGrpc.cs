@@ -58,14 +58,6 @@ namespace JournalGrpcService {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::JournalGrpcService.PostJournalEntryReply> __Marshaller_PostJournalEntryReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JournalGrpcService.PostJournalEntryReply.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JournalGrpcService.GetReflectionAnswersRequest> __Marshaller_GetReflectionAnswersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JournalGrpcService.GetReflectionAnswersRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JournalGrpcService.GetReflectionAnswersReply> __Marshaller_GetReflectionAnswersReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JournalGrpcService.GetReflectionAnswersReply.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JournalGrpcService.GetReflectionQuestionsRequest> __Marshaller_GetReflectionQuestionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JournalGrpcService.GetReflectionQuestionsRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::JournalGrpcService.GetReflectionQuestionsReply> __Marshaller_GetReflectionQuestionsReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JournalGrpcService.GetReflectionQuestionsReply.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::JournalGrpcService.GetUsersRequest> __Marshaller_GetUsersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JournalGrpcService.GetUsersRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::JournalGrpcService.GetUsersReply> __Marshaller_GetUsersReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::JournalGrpcService.GetUsersReply.Parser));
@@ -93,22 +85,6 @@ namespace JournalGrpcService {
         "PostJournalEntry",
         __Marshaller_PostJournalEntryRequest,
         __Marshaller_PostJournalEntryReply);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JournalGrpcService.GetReflectionAnswersRequest, global::JournalGrpcService.GetReflectionAnswersReply> __Method_GetReflectionAnswers = new grpc::Method<global::JournalGrpcService.GetReflectionAnswersRequest, global::JournalGrpcService.GetReflectionAnswersReply>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "GetReflectionAnswers",
-        __Marshaller_GetReflectionAnswersRequest,
-        __Marshaller_GetReflectionAnswersReply);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::JournalGrpcService.GetReflectionQuestionsRequest, global::JournalGrpcService.GetReflectionQuestionsReply> __Method_GetReflectionQuestions = new grpc::Method<global::JournalGrpcService.GetReflectionQuestionsRequest, global::JournalGrpcService.GetReflectionQuestionsReply>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "GetReflectionQuestions",
-        __Marshaller_GetReflectionQuestionsRequest,
-        __Marshaller_GetReflectionQuestionsReply);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::JournalGrpcService.GetUsersRequest, global::JournalGrpcService.GetUsersReply> __Method_GetUsers = new grpc::Method<global::JournalGrpcService.GetUsersRequest, global::JournalGrpcService.GetUsersReply>(
@@ -147,18 +123,6 @@ namespace JournalGrpcService {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JournalGrpcService.GetReflectionAnswersReply> GetReflectionAnswers(global::JournalGrpcService.GetReflectionAnswersRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::JournalGrpcService.GetReflectionQuestionsReply> GetReflectionQuestions(global::JournalGrpcService.GetReflectionQuestionsRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::JournalGrpcService.GetUsersReply> GetUsers(global::JournalGrpcService.GetUsersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -175,8 +139,6 @@ namespace JournalGrpcService {
           .AddMethod(__Method_GetJournalEntries, serviceImpl.GetJournalEntries)
           .AddMethod(__Method_GetJournalEntry, serviceImpl.GetJournalEntry)
           .AddMethod(__Method_PostJournalEntry, serviceImpl.PostJournalEntry)
-          .AddMethod(__Method_GetReflectionAnswers, serviceImpl.GetReflectionAnswers)
-          .AddMethod(__Method_GetReflectionQuestions, serviceImpl.GetReflectionQuestions)
           .AddMethod(__Method_GetUsers, serviceImpl.GetUsers).Build();
     }
 
@@ -190,8 +152,6 @@ namespace JournalGrpcService {
       serviceBinder.AddMethod(__Method_GetJournalEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JournalGrpcService.GetJournalEntriesRequest, global::JournalGrpcService.GetJournalEntriesReply>(serviceImpl.GetJournalEntries));
       serviceBinder.AddMethod(__Method_GetJournalEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JournalGrpcService.GetJournalEntryRequest, global::JournalGrpcService.GetJournalEntryReply>(serviceImpl.GetJournalEntry));
       serviceBinder.AddMethod(__Method_PostJournalEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JournalGrpcService.PostJournalEntryRequest, global::JournalGrpcService.PostJournalEntryReply>(serviceImpl.PostJournalEntry));
-      serviceBinder.AddMethod(__Method_GetReflectionAnswers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JournalGrpcService.GetReflectionAnswersRequest, global::JournalGrpcService.GetReflectionAnswersReply>(serviceImpl.GetReflectionAnswers));
-      serviceBinder.AddMethod(__Method_GetReflectionQuestions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JournalGrpcService.GetReflectionQuestionsRequest, global::JournalGrpcService.GetReflectionQuestionsReply>(serviceImpl.GetReflectionQuestions));
       serviceBinder.AddMethod(__Method_GetUsers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::JournalGrpcService.GetUsersRequest, global::JournalGrpcService.GetUsersReply>(serviceImpl.GetUsers));
     }
 
