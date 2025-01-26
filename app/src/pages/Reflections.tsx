@@ -3,9 +3,10 @@ import ReflectionService from '../services/reflection-service';
 import IReflectionQuestion from '../interfaces/IReflectionQuestion';
 import { ScheduleType } from '../interfaces/ScheduleType';
 
-
+// Component die die jeweils täglichen Refklektionsfragen bearbeitet
 export const Reflections: React.FC = () => {
-  const [loading, setLoading] = useState(false);
+
+  //states und services
   const [questions, setQuestions] = useState<IReflectionQuestion[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [answers, setAnswers] = useState<Record<number, string>>({});
@@ -13,8 +14,9 @@ export const Reflections: React.FC = () => {
 
   const reflectionService = new ReflectionService();
 
+
+  // fetched alle reflections fragen und filtert + mapped alle für den heutigen Tag
   const fetchReflectionQuestions = async () => {
-    setLoading(true);
     setError(null);
 
     try {
@@ -36,16 +38,10 @@ export const Reflections: React.FC = () => {
     } catch (err: any) {
       setError(err.message);
       console.error('Error fetching reflection questions:', err);
-    } finally {
-      setLoading(false);
     }
   };
 
-  const getTodayDateString = () => {
-    const today = new Date();
-    return today.toLocaleDateString('en-CA');
-  };
-
+  // liefert alle Fragen die für den heutigen Tag vorhergesehen sind
   const getTodaysQuestions = (questions: IReflectionQuestion[]) => {
     const today = new Date();
     return questions.filter((question) => {
@@ -78,6 +74,7 @@ export const Reflections: React.FC = () => {
     });
   };
 
+  // Filtert alle fragen die noch beantwortet werden müssen
   const filterQuestionsWithAnswers = async (questions: IReflectionQuestion[]) => {
     const todayDateString = getTodayDateString();
     const filteredQuestions: IReflectionQuestion[] = [];
@@ -86,8 +83,9 @@ export const Reflections: React.FC = () => {
       try {
         const answer = await reflectionService.getReflectionAnswerByQuestionId(question.questionId);
 
+       
         if (answer?.answerDate && answer.answerDate.startsWith(todayDateString)) {
-          continue;
+          continue;  // wenn frage bereits beantwortet wurde -> überspringen
         }
 
         filteredQuestions.push(question);
@@ -99,13 +97,8 @@ export const Reflections: React.FC = () => {
     return filteredQuestions;
   };
 
-  const handleAnswerChange = (questionId: number, value: string) => {
-    setAnswers((prev) => ({
-      ...prev,
-      [questionId]: value,
-    }));
-  };
 
+  // sendet Antwort der Frage an gGRPC server
   const postAnswer = async (questionId: number) => {
     const answerContent = answers[questionId];
 
@@ -124,15 +117,32 @@ export const Reflections: React.FC = () => {
         new Date().toISOString(),
         true
       );
-      setPostMessage(`Answer posted successfully: ${response.message}`);
+
+      setAnswers({});
+      fetchReflectionQuestions();
+      setPostMessage(`Answer posted successfully.`);
     } catch (err: any) {
       setPostMessage(`Error posting answer: ${err.message}`);
     }
   };
 
+    // Antwort speichern
+    const handleAnswerChange = (questionId: number, value: string) => {
+      setAnswers((prev) => ({
+        ...prev,
+        [questionId]: value,
+      }));
+    };
+  
   useEffect(() => {
     fetchReflectionQuestions();
   }, []);
+
+    //custom date string, wie das Datum in der Datenbank gespeichert wird
+    const getTodayDateString = () => {
+      const today = new Date();
+      return today.toLocaleDateString('en-CA');
+    };
 
   return (
     <div className="container py-4 bg-dark text-light">
@@ -140,7 +150,6 @@ export const Reflections: React.FC = () => {
 
 
       {error && <p className="text-danger">{error}</p>}
-      {loading && <p className="text-info">Loading...</p>}
 
       {questions.length > 0 ? (
         <section className="p-4 bg-dark-subtle rounded border border-secondary">
@@ -163,7 +172,7 @@ export const Reflections: React.FC = () => {
           ))}
         </section>
       ) : (
-        <p className="text-muted">No questions scheduled for today.</p>
+        <p className="text-muted">No questions to answer left.</p>
       )}
 
       {postMessage && <p className="text-success mt-3">{postMessage}</p>}

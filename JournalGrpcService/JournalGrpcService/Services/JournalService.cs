@@ -37,7 +37,7 @@ namespace JournalGrpcService.Services
                             {
                                 reply.Entries.Add(new JournalEntryReply
                                 {
-                                    EntryId = reader.GetInt32(0),  // Use GetInt32 for INT columns
+                                    EntryId = reader.GetInt32(0),
                                     EntryTitle = reader.GetString(1),
                                     EntryContent = reader.GetString(2),
                                     EntryDate = reader.IsDBNull(3) ? "" : reader.GetDateTime(3).ToString("yyyy-MM-dd HH:mm:ss")
@@ -56,65 +56,18 @@ namespace JournalGrpcService.Services
             return reply;
         }
 
-        // Get single entry
-        public override async Task<GetJournalEntryReply> GetJournalEntry(GetJournalEntryRequest request, ServerCallContext context)
-        {
-            string connectionString = "Server=localhost;Database=master;Integrated Security=true;";
-            string query = "SELECT entry_title, entry_content, entry_date FROM JournalEntries WHERE entry_id = @EntryId";
-
-            var reply = new GetJournalEntryReply();
-
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    await connection.OpenAsync();
-                    _logger.LogInformation("Connection opened successfully.");
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@EntryId", request.EntryId);
-
-                        using (var reader = await command.ExecuteReaderAsync())
-                        {
-                            if (await reader.ReadAsync())
-                            {
-                                reply.EntryTitle = reader.GetString(0);
-                                reply.EntryContent = reader.GetString(1);
-                                reply.EntryDate = reader.GetDateTime(2).ToString("yyyy-MM-dd HH:mm:ss");
-                            }
-                            else
-                            {
-                                _logger.LogWarning("No journal entry found with ID {EntryId}", request.EntryId);
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred while fetching the journal entry.");
-                reply.EntryContent = $"Error: {ex.Message}";
-            }
-
-            return reply;
-        }
-
         // post entry
         public override async Task<PostJournalEntryReply> PostJournalEntry(PostJournalEntryRequest request, ServerCallContext context)
         {
             string connectionString = "Server=localhost;Database=master;Integrated Security=true;";
             string query;
 
-            // Check if EntryId is greater than 0 to determine whether to update or insert
             if (request.EntryId > 0)
             {
-                // Update existing journal entry
                 query = "UPDATE JournalEntries SET entry_title = @EntryTitle, entry_content = @EntryContent, entry_date = @EntryDate WHERE entry_id = @EntryId";
             }
             else
             {
-                // Insert new journal entry
                 query = "INSERT INTO JournalEntries (user_id, entry_title, entry_content, entry_date) VALUES (@UserId, @EntryTitle, @EntryContent, @EntryDate)";
             }
 
@@ -131,12 +84,10 @@ namespace JournalGrpcService.Services
                     {
                         if (request.EntryId > 0)
                         {
-                            // Parameters for UPDATE
                             command.Parameters.AddWithValue("@EntryId", request.EntryId);
                         }
                         else
                         {
-                            // Parameters for INSERT
                             command.Parameters.AddWithValue("@UserId", request.UserId);
                         }
 

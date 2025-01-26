@@ -8,9 +8,6 @@
 using grpc = global::Grpc.Core;
 
 namespace ReflectionGrpcService {
-  /// <summary>
-  /// Reflection Service Definition
-  /// </summary>
   public static partial class Reflection
   {
     static readonly string __ServiceName = "Reflection";
@@ -53,10 +50,6 @@ namespace ReflectionGrpcService {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ReflectionGrpcService.GetReflectionQuestionsReply> __Marshaller_GetReflectionQuestionsReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ReflectionGrpcService.GetReflectionQuestionsReply.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::ReflectionGrpcService.GetReflectionQuestionByIdRequest> __Marshaller_GetReflectionQuestionByIdRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ReflectionGrpcService.GetReflectionQuestionByIdRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::ReflectionGrpcService.GetReflectionQuestionByIdReply> __Marshaller_GetReflectionQuestionByIdReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ReflectionGrpcService.GetReflectionQuestionByIdReply.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdRequest> __Marshaller_GetReflectionAnswerByQuestionIdRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdReply> __Marshaller_GetReflectionAnswerByQuestionIdReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdReply.Parser));
@@ -84,14 +77,6 @@ namespace ReflectionGrpcService {
         "GetReflectionQuestions",
         __Marshaller_GetReflectionQuestionsRequest,
         __Marshaller_GetReflectionQuestionsReply);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::ReflectionGrpcService.GetReflectionQuestionByIdRequest, global::ReflectionGrpcService.GetReflectionQuestionByIdReply> __Method_GetReflectionQuestionById = new grpc::Method<global::ReflectionGrpcService.GetReflectionQuestionByIdRequest, global::ReflectionGrpcService.GetReflectionQuestionByIdReply>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "GetReflectionQuestionById",
-        __Marshaller_GetReflectionQuestionByIdRequest,
-        __Marshaller_GetReflectionQuestionByIdReply);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdRequest, global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdReply> __Method_GetReflectionAnswerByQuestionId = new grpc::Method<global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdRequest, global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdReply>(
@@ -143,84 +128,36 @@ namespace ReflectionGrpcService {
     [grpc::BindServiceMethod(typeof(Reflection), "BindService")]
     public abstract partial class ReflectionBase
     {
-      /// <summary>
-      /// Retrieves all reflection questions for a user
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::ReflectionGrpcService.GetReflectionQuestionsReply> GetReflectionQuestions(global::ReflectionGrpcService.GetReflectionQuestionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      /// <summary>
-      /// Retrieves a specific reflection question by its ID
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::ReflectionGrpcService.GetReflectionQuestionByIdReply> GetReflectionQuestionById(global::ReflectionGrpcService.GetReflectionQuestionByIdRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Retrieves an answer to a reflection question by question ID
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdReply> GetReflectionAnswerByQuestionId(global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      /// <summary>
-      /// Posts a new reflection question
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::ReflectionGrpcService.PostReflectionQuestionReply> PostReflectionQuestion(global::ReflectionGrpcService.PostReflectionQuestionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      /// <summary>
-      /// Posts an answer to a reflection question
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::ReflectionGrpcService.PostReflectionAnswerReply> PostReflectionAnswer(global::ReflectionGrpcService.PostReflectionAnswerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      /// <summary>
-      /// Updates the active status of a reflection question
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::ReflectionGrpcService.UpdateReflectionQuestionActiveReply> UpdateReflectionQuestionActiveStatus(global::ReflectionGrpcService.UpdateReflectionQuestionActiveRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      /// <summary>
-      /// Retrieves all reflection answers for a specific date
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::ReflectionGrpcService.GetReflectionAnswersByDateReply> GetReflectionAnswersByDate(global::ReflectionGrpcService.GetReflectionAnswersByDateRequest request, grpc::ServerCallContext context)
       {
@@ -236,7 +173,6 @@ namespace ReflectionGrpcService {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetReflectionQuestions, serviceImpl.GetReflectionQuestions)
-          .AddMethod(__Method_GetReflectionQuestionById, serviceImpl.GetReflectionQuestionById)
           .AddMethod(__Method_GetReflectionAnswerByQuestionId, serviceImpl.GetReflectionAnswerByQuestionId)
           .AddMethod(__Method_PostReflectionQuestion, serviceImpl.PostReflectionQuestion)
           .AddMethod(__Method_PostReflectionAnswer, serviceImpl.PostReflectionAnswer)
@@ -252,7 +188,6 @@ namespace ReflectionGrpcService {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ReflectionBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetReflectionQuestions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ReflectionGrpcService.GetReflectionQuestionsRequest, global::ReflectionGrpcService.GetReflectionQuestionsReply>(serviceImpl.GetReflectionQuestions));
-      serviceBinder.AddMethod(__Method_GetReflectionQuestionById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ReflectionGrpcService.GetReflectionQuestionByIdRequest, global::ReflectionGrpcService.GetReflectionQuestionByIdReply>(serviceImpl.GetReflectionQuestionById));
       serviceBinder.AddMethod(__Method_GetReflectionAnswerByQuestionId, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdRequest, global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdReply>(serviceImpl.GetReflectionAnswerByQuestionId));
       serviceBinder.AddMethod(__Method_PostReflectionQuestion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ReflectionGrpcService.PostReflectionQuestionRequest, global::ReflectionGrpcService.PostReflectionQuestionReply>(serviceImpl.PostReflectionQuestion));
       serviceBinder.AddMethod(__Method_PostReflectionAnswer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ReflectionGrpcService.PostReflectionAnswerRequest, global::ReflectionGrpcService.PostReflectionAnswerReply>(serviceImpl.PostReflectionAnswer));

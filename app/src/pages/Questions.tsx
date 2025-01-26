@@ -5,15 +5,23 @@ import ReflectionService from '../services/reflection-service';
 import IReflectionQuestion from '../interfaces/IReflectionQuestion';
 import { ScheduleType } from '../interfaces/ScheduleType';
 
+
+// Component die erstellt wird wenn Reflektionsfragen hinzugefügt, bzw. entfernt werden.
+
 export const Questions: React.FC = () => {
+
+    //States und Services 
     const [questions, setQuestions] = useState<IReflectionQuestion[]>([]);
-    const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
     const [questionText, setQuestionText] = useState('');
     const [scheduleType, setScheduleType] = useState<ScheduleType>(ScheduleType.Daily);
     const [scheduleValue, setScheduleValue] = useState<Date | null>(new Date());
 
     const reflectionService = new ReflectionService();
 
+    /*
+     useEffect wird beim laden und jedem rendern der componente geladen
+     hier werden die Questions geladen und wie im Interface definiert gemapped.
+     */
     useEffect(() => {
         const fetchQuestions = async () => {
             try {
@@ -27,6 +35,7 @@ export const Questions: React.FC = () => {
                     scheduleValue: q.scheduleValue,
                 }));
 
+                // von neu nach alt softieren
                 mappedQuestions.sort(
                     (a: IReflectionQuestion, b: IReflectionQuestion) =>
                         new Date(b.scheduleValue).getTime() - new Date(a.scheduleValue).getTime()
@@ -41,11 +50,12 @@ export const Questions: React.FC = () => {
         fetchQuestions();
     }, []);
 
+    // funktion die das hinzfügen einer frage bearbeitet
     const handleAddQuestion = async () => {
         if (questionText.trim() && scheduleValue) {
             try {
                 await reflectionService.postReflectionQuestion(
-                    1,
+                    1, // userId: hardcoded da nur ein user
                     questionText.trim(),
                     scheduleType,
                     scheduleValue.toLocaleDateString()
@@ -59,7 +69,7 @@ export const Questions: React.FC = () => {
                     scheduleValue: scheduleValue.toLocaleDateString(),
                 };
 
-                setQuestions((prevQuestions) => [...prevQuestions, newQuestion]);
+                setQuestions((prevQuestions) => [...prevQuestions, newQuestion]); //aktualisiert den state von question indem die new Question hinzugefügt wird
                 setQuestionText('');
                 setScheduleType(ScheduleType.Daily);
                 setScheduleValue(new Date());
@@ -69,6 +79,7 @@ export const Questions: React.FC = () => {
         }
     };
 
+    // funktion die das entfernen von Fragen bearbeitet
     const handleRemoveQuestion = async (questionId: number) => {
         try {
             await reflectionService.updateReflectionQuestionActiveStatus(questionId, false);
@@ -82,6 +93,7 @@ export const Questions: React.FC = () => {
         <div className="container py-4 bg-dark">
             <h2 className="mb-4 text-center fw-bold fs-5">Reflection Manager</h2>
 
+            {/* SECTION: Hinzufügen neuer Fragen */}
             <section className="mb-5 p-4 bg-secondary rounded border border-secondary">
                 <form>
                     <div className="mb-3">
@@ -137,29 +149,29 @@ export const Questions: React.FC = () => {
                 </form>
             </section>
 
-            {/* Existing Reflection Questions Section */}
+            {/* SECTION: Existierende Fragen */}
             <section className="p-4 bg-secondary rounded shadow-sm border-secondary mt-5">
                 <h3 className="mb-4 fw-bold fs-7">Existing Reflection Questions</h3>
                 {questions.length > 0 ? (
                     <ul className="list-group bg-dark">
                         {questions.map((question) => (
-    <li
-        key={question.questionId}
-        className="list-group-item bg-dark d-flex justify-content-between align-items-center"
-    >
-        <span>
-            {question.questionText} (
-            <em>{question.scheduleType} - {question.scheduleValue}</em>)
-        </span>
-        <button
-            type="button"
-            className="btn text-danger"
-            onClick={() => handleRemoveQuestion(question.questionId)}
-        >
-            <i className="fas fa-trash"></i> Delete
-        </button>
-    </li>
-))}
+                        <li
+                            key={question.questionId}
+                            className="list-group-item bg-dark d-flex justify-content-between align-items-center"
+                        >
+                            <span>
+                                {question.questionText} (
+                                <em>{question.scheduleType} - {question.scheduleValue}</em>)
+                            </span>
+                            <button
+                                type="button"
+                                className="btn text-danger"
+                                onClick={() => handleRemoveQuestion(question.questionId)}
+                            >
+                                <i className="fas fa-trash"></i> Delete
+                            </button>
+                        </li>
+                        ))}
 
                     </ul>
                 ) : (

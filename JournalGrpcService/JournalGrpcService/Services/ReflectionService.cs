@@ -22,9 +22,9 @@ namespace JournalGrpcService.Services
         {
             string connectionString = "Server=localhost;Database=master;Integrated Security=true;";
             string query = @"
-        SELECT question_id, user_id, question_text, schedule_type, schedule_value 
-        FROM ReflectionQuestions 
-        WHERE user_id = @UserId AND active = 1"; // Only include active questions
+                            SELECT question_id, user_id, question_text, schedule_type, schedule_value 
+                            FROM ReflectionQuestions 
+                            WHERE user_id = @UserId AND active = 1";
 
             var reply = new GetReflectionQuestionsReply();
 
@@ -65,65 +65,16 @@ namespace JournalGrpcService.Services
         }
 
 
-
-        // Get a specific reflection question by its ID
-        public override async Task<GetReflectionQuestionByIdReply> GetReflectionQuestionById(GetReflectionQuestionByIdRequest request, ServerCallContext context)
-        {
-            string connectionString = "Server=localhost;Database=master;Integrated Security=true;";
-            string query = "SELECT question_id, user_id, question_text, schedule_type, schedule_value FROM ReflectionQuestions WHERE question_id = @QuestionId";
-
-            var reply = new GetReflectionQuestionByIdReply();
-
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    await connection.OpenAsync();
-                    _logger.LogInformation("Connection opened successfully.");
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@QuestionId", request.QuestionId);
-
-                        using (var reader = await command.ExecuteReaderAsync())
-                        {
-                            if (await reader.ReadAsync())
-                            {
-                                reply.Question = new ReflectionQuestion
-                                {
-                                    QuestionId = reader.GetInt64(0),
-                                    UserId = reader.GetInt64(1),
-                                    QuestionText = reader.GetString(2),
-                                    ScheduleType = reader.GetString(3),
-                                    ScheduleValue = reader.GetString(4)
-                                };
-                            }
-                            else
-                            {
-                                _logger.LogWarning("No reflection question found with ID {QuestionId}", request.QuestionId);
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred while fetching the reflection question.");
-            }
-
-            return reply;
-        }
-
         // Get an answer to a reflection question by question ID
         public override async Task<GetReflectionAnswerByQuestionIdReply> GetReflectionAnswerByQuestionId(GetReflectionAnswerByQuestionIdRequest request, ServerCallContext context)
         {
             string connectionString = "Server=localhost;Database=master;Integrated Security=true;";
             string query = @"
-        SELECT TOP 1 
-            answer_id, question_id, user_id, answer_content, answer_date, is_completed
-        FROM ReflectionAnswers 
-        WHERE question_id = @QuestionId
-        ORDER BY answer_date DESC";
+                            SELECT TOP 1 
+                                answer_id, question_id, user_id, answer_content, answer_date, is_completed
+                            FROM ReflectionAnswers 
+                            WHERE question_id = @QuestionId
+                            ORDER BY answer_date DESC";
 
             var reply = new GetReflectionAnswerByQuestionIdReply();
 
@@ -142,7 +93,6 @@ namespace JournalGrpcService.Services
                         {
                             if (await reader.ReadAsync())
                             {
-                                // Fetch answer_date as DateTime and format it as a string
                                 DateTime answerDate = reader.GetDateTime(4);
 
                                 reply.Answer = new ReflectionAnswer
@@ -202,13 +152,11 @@ namespace JournalGrpcService.Services
                         command.Parameters.AddWithValue("@QuestionText", request.QuestionText);
                         command.Parameters.AddWithValue("@ScheduleType", request.ScheduleType);
 
-                        // Parse ScheduleValue from dd.M.yyyy format
                         if (!DateTime.TryParseExact(request.ScheduleValue, "d.M.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate))
                         {
                             throw new ArgumentException("Invalid date format for ScheduleValue. Expected format is dd.M.yyyy.");
                         }
 
-                        // Pass only the date portion to the database
                         command.Parameters.AddWithValue("@ScheduleValue", parsedDate.Date);
 
                         await command.ExecuteNonQueryAsync();
@@ -268,9 +216,9 @@ namespace JournalGrpcService.Services
         {
             string connectionString = "Server=localhost;Database=master;Integrated Security=true;";
             string query = @"
-        UPDATE ReflectionQuestions
-        SET active = @Active
-        WHERE question_id = @QuestionId";
+                            UPDATE ReflectionQuestions
+                            SET active = @Active
+                            WHERE question_id = @QuestionId";
 
             var reply = new UpdateReflectionQuestionActiveReply();
 
@@ -289,12 +237,10 @@ namespace JournalGrpcService.Services
                         int rowsAffected = await command.ExecuteNonQueryAsync();
                         if (rowsAffected > 0)
                         {
-                            reply.Message = $"Successfully updated the active status to {request.Active} for question ID {request.QuestionId}.";
                             _logger.LogInformation("Updated active status to {Active} for question ID {QuestionId}.", request.Active, request.QuestionId);
                         }
                         else
                         {
-                            reply.Message = "No question found with the given ID.";
                             _logger.LogWarning("No question found with ID {QuestionId}.", request.QuestionId);
                         }
                     }
@@ -313,12 +259,12 @@ namespace JournalGrpcService.Services
         {
             string connectionString = "Server=localhost;Database=master;Integrated Security=true;";
             string query = @"
-        SELECT 
-            a.answer_id, a.question_id, a.user_id, a.answer_content, a.answer_date, a.is_completed,
-            q.question_id, q.user_id, q.question_text, q.schedule_type, q.schedule_value
-        FROM ReflectionAnswers a
-        INNER JOIN ReflectionQuestions q ON a.question_id = q.question_id
-        WHERE CAST(a.answer_date AS DATE) = @Date";
+                            SELECT 
+                                a.answer_id, a.question_id, a.user_id, a.answer_content, a.answer_date, a.is_completed,
+                                q.question_id, q.user_id, q.question_text, q.schedule_type, q.schedule_value
+                            FROM ReflectionAnswers a
+                            INNER JOIN ReflectionQuestions q ON a.question_id = q.question_id
+                            WHERE CAST(a.answer_date AS DATE) = @Date";
 
             var reply = new GetReflectionAnswersByDateReply();
 
@@ -337,22 +283,22 @@ namespace JournalGrpcService.Services
                         {
                             while (await reader.ReadAsync())
                             {
-                                // Populate ReflectionAnswer
+
                                 var answer = new ReflectionAnswer
                                 {
-                                    AnswerId = reader.GetInt32(0), // Use GetInt64 for BIGINT
-                                    QuestionId = reader.GetInt32(1), // Use GetInt64 for BIGINT
-                                    UserId = reader.GetInt32(2), // Use GetInt64 for BIGINT
+                                    AnswerId = reader.GetInt32(0), 
+                                    QuestionId = reader.GetInt32(1), 
+                                    UserId = reader.GetInt32(2), 
                                     AnswerContent = reader.GetString(3),
                                     AnswerDate = reader.GetDateTime(4).ToString("yyyy-MM-dd"),
                                     IsCompleted = reader.GetBoolean(5)
                                 };
 
-                                // Populate ReflectionQuestion
+
                                 var question = new ReflectionQuestion
                                 {
-                                    QuestionId = reader.GetInt64(6), // Use GetInt64 for BIGINT
-                                    UserId = reader.GetInt64(7), // Use GetInt64 for BIGINT
+                                    QuestionId = reader.GetInt64(6), 
+                                    UserId = reader.GetInt64(7), 
                                     QuestionText = reader.GetString(8),
                                     ScheduleType = reader.GetString(9),
                                     ScheduleValue = reader.GetDateTime(10).ToString("yyyy-MM-dd")

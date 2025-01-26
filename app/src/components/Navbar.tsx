@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 
+
 export const NavBar: React.FC = () => {
   return (
     <nav className="navbar bg-base-100">
@@ -9,6 +10,7 @@ export const NavBar: React.FC = () => {
         </Link>
       </div>
 
+      {/* flex-none nimmt nur platz ein den es benötigt*/}
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1 space-x-4">
           <li>

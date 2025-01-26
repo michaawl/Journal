@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import { Layout } from './components/common/Layout'
 import { Questions } from './pages/Questions'
 import { Calendar } from './pages/Calendar'
 import { JournalEntry } from './pages/JournalEntry'
 import { Reflections } from './pages/Reflections'
 
+
+// Routing einstellungen
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

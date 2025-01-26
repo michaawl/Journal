@@ -2,7 +2,7 @@ const { app, BrowserWindow, ipcMain } = require('electron')
 const url = require('url');
 const path = require('path');
 
-
+// Electron App
 function createMainWindow() {
     const mainWindow = new BrowserWindow({
         title: 'Journal',
@@ -18,6 +18,7 @@ function createMainWindow() {
 
     mainWindow.webContents.openDevTools();
 
+    // build verzeichnis für Electron, damit wird die Electron App mittels des React builds gestartet
     const startUrl = url.format({
         pathname: path.join(__dirname, './app/build/index.html'),
 

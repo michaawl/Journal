@@ -3,8 +3,11 @@ import { useLocation } from 'react-router-dom';
 import JournalService from '../services/journal-service';
 import ReflectionService from '../services/reflection-service';
 
+// Komponente wird aufgerufen beim klick eines datums im Kalender
 export const JournalEntry: React.FC = () => {
-  const location = useLocation();
+
+  // States und Services
+  const location = useLocation(); //wird verwendet um parameter auszulesen
   const query = new URLSearchParams(location.search);
 
   const initialDate = query.get('date');
@@ -19,6 +22,7 @@ export const JournalEntry: React.FC = () => {
   const journalService = new JournalService();
   const reflectionService = new ReflectionService();
 
+  // lädt fragen und antworten
   useEffect(() => {
     const fetchQuestionsAndAnswers = async () => {
       if (!initialDate) {
@@ -40,6 +44,7 @@ export const JournalEntry: React.FC = () => {
     fetchQuestionsAndAnswers();
   }, [initialDate]);
 
+  // verarbeitet speichern
   const handleSave = async () => {
     if (!title.trim() || !entry.trim()) {
       alert('Title and entry cannot be empty.');
@@ -54,7 +59,6 @@ export const JournalEntry: React.FC = () => {
 
       alert('Journal entry saved successfully!');
     } catch (error) {
-      console.error('Error saving journal entry:', error);
       alert('Failed to save the journal entry.');
     }
   };

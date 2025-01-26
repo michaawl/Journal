@@ -8,6 +8,7 @@ class JournalService {
     this.client = new grpcWeb.JournalClient('https://localhost:7160');
   }
 
+  // returns all journal entries
   async getJournalEntries(userId: number): Promise<any> {
     return new Promise((resolve, reject) => {
       const request = new proto.GetJournalEntriesRequest();
@@ -22,21 +23,7 @@ class JournalService {
     });
   }
 
-  getJournalEntry(entryId: number): Promise<any> {
-    return new Promise((resolve, reject) => {
-      const request = new proto.GetJournalEntryRequest();
-      request.setEntryId(entryId);
-
-      this.client.getJournalEntry(request, {}, (err: any, response: any) => {
-        if (err) {
-          reject(err.message);
-        } else {
-          resolve(response.toObject());
-        }
-      });
-    });
-  }
-
+  // posts journal entry
   postJournalEntry(userId: number, title: string, content: string, entryDate: string, entryId?: number): Promise<any> {
     return new Promise((resolve, reject) => {
       const request = new proto.PostJournalEntryRequest();

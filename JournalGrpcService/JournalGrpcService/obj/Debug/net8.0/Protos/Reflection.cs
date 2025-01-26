@@ -27,59 +27,52 @@ namespace ReflectionGrpcService {
             "ChdQcm90b3MvcmVmbGVjdGlvbi5wcm90byIwCh1HZXRSZWZsZWN0aW9uUXVl",
             "c3Rpb25zUmVxdWVzdBIPCgd1c2VyX2lkGAEgASgDIkUKG0dldFJlZmxlY3Rp",
             "b25RdWVzdGlvbnNSZXBseRImCglxdWVzdGlvbnMYASADKAsyEy5SZWZsZWN0",
-            "aW9uUXVlc3Rpb24iNwogR2V0UmVmbGVjdGlvblF1ZXN0aW9uQnlJZFJlcXVl",
-            "c3QSEwoLcXVlc3Rpb25faWQYASABKAMiRwoeR2V0UmVmbGVjdGlvblF1ZXN0",
-            "aW9uQnlJZFJlcGx5EiUKCHF1ZXN0aW9uGAEgASgLMhMuUmVmbGVjdGlvblF1",
-            "ZXN0aW9uIj0KJkdldFJlZmxlY3Rpb25BbnN3ZXJCeVF1ZXN0aW9uSWRSZXF1",
-            "ZXN0EhMKC3F1ZXN0aW9uX2lkGAEgASgDIkkKJEdldFJlZmxlY3Rpb25BbnN3",
-            "ZXJCeVF1ZXN0aW9uSWRSZXBseRIhCgZhbnN3ZXIYASABKAsyES5SZWZsZWN0",
-            "aW9uQW5zd2VyInYKHVBvc3RSZWZsZWN0aW9uUXVlc3Rpb25SZXF1ZXN0Eg8K",
-            "B3VzZXJfaWQYASABKAMSFQoNcXVlc3Rpb25fdGV4dBgCIAEoCRIVCg1zY2hl",
-            "ZHVsZV90eXBlGAMgASgJEhYKDnNjaGVkdWxlX3ZhbHVlGAQgASgJIi4KG1Bv",
-            "c3RSZWZsZWN0aW9uUXVlc3Rpb25SZXBseRIPCgdtZXNzYWdlGAEgASgJIoYB",
-            "ChtQb3N0UmVmbGVjdGlvbkFuc3dlclJlcXVlc3QSEwoLcXVlc3Rpb25faWQY",
-            "ASABKAMSDwoHdXNlcl9pZBgCIAEoAxIWCg5hbnN3ZXJfY29udGVudBgDIAEo",
-            "CRITCgthbnN3ZXJfZGF0ZRgEIAEoCRIUCgxpc19jb21wbGV0ZWQYBSABKAgi",
-            "LAoZUG9zdFJlZmxlY3Rpb25BbnN3ZXJSZXBseRIPCgdtZXNzYWdlGAEgASgJ",
-            "IoABChJSZWZsZWN0aW9uUXVlc3Rpb24SEwoLcXVlc3Rpb25faWQYASABKAMS",
-            "DwoHdXNlcl9pZBgCIAEoAxIVCg1xdWVzdGlvbl90ZXh0GAMgASgJEhUKDXNj",
-            "aGVkdWxlX3R5cGUYBCABKAkSFgoOc2NoZWR1bGVfdmFsdWUYBSABKAkijgEK",
-            "EFJlZmxlY3Rpb25BbnN3ZXISEQoJYW5zd2VyX2lkGAEgASgDEhMKC3F1ZXN0",
-            "aW9uX2lkGAIgASgDEg8KB3VzZXJfaWQYAyABKAMSFgoOYW5zd2VyX2NvbnRl",
-            "bnQYBCABKAkSEwoLYW5zd2VyX2RhdGUYBSABKAkSFAoMaXNfY29tcGxldGVk",
-            "GAYgASgIIkwKJVVwZGF0ZVJlZmxlY3Rpb25RdWVzdGlvbkFjdGl2ZVJlcXVl",
-            "c3QSEwoLcXVlc3Rpb25faWQYASABKAMSDgoGYWN0aXZlGAIgASgIIjYKI1Vw",
-            "ZGF0ZVJlZmxlY3Rpb25RdWVzdGlvbkFjdGl2ZVJlcGx5Eg8KB21lc3NhZ2UY",
-            "ASABKAkiMQohR2V0UmVmbGVjdGlvbkFuc3dlcnNCeURhdGVSZXF1ZXN0EgwK",
-            "BGRhdGUYASABKAkiYAofR2V0UmVmbGVjdGlvbkFuc3dlcnNCeURhdGVSZXBs",
-            "eRI9ChZhbnN3ZXJzX3dpdGhfcXVlc3Rpb25zGAEgAygLMh0uUmVmbGVjdGlv",
-            "bkFuc3dlcldpdGhRdWVzdGlvbiJoChxSZWZsZWN0aW9uQW5zd2VyV2l0aFF1",
-            "ZXN0aW9uEiEKBmFuc3dlchgBIAEoCzIRLlJlZmxlY3Rpb25BbnN3ZXISJQoI",
-            "cXVlc3Rpb24YAiABKAsyEy5SZWZsZWN0aW9uUXVlc3Rpb24yvAUKClJlZmxl",
-            "Y3Rpb24SVgoWR2V0UmVmbGVjdGlvblF1ZXN0aW9ucxIeLkdldFJlZmxlY3Rp",
-            "b25RdWVzdGlvbnNSZXF1ZXN0GhwuR2V0UmVmbGVjdGlvblF1ZXN0aW9uc1Jl",
-            "cGx5El8KGUdldFJlZmxlY3Rpb25RdWVzdGlvbkJ5SWQSIS5HZXRSZWZsZWN0",
-            "aW9uUXVlc3Rpb25CeUlkUmVxdWVzdBofLkdldFJlZmxlY3Rpb25RdWVzdGlv",
-            "bkJ5SWRSZXBseRJxCh9HZXRSZWZsZWN0aW9uQW5zd2VyQnlRdWVzdGlvbklk",
-            "EicuR2V0UmVmbGVjdGlvbkFuc3dlckJ5UXVlc3Rpb25JZFJlcXVlc3QaJS5H",
-            "ZXRSZWZsZWN0aW9uQW5zd2VyQnlRdWVzdGlvbklkUmVwbHkSVgoWUG9zdFJl",
-            "ZmxlY3Rpb25RdWVzdGlvbhIeLlBvc3RSZWZsZWN0aW9uUXVlc3Rpb25SZXF1",
-            "ZXN0GhwuUG9zdFJlZmxlY3Rpb25RdWVzdGlvblJlcGx5ElAKFFBvc3RSZWZs",
-            "ZWN0aW9uQW5zd2VyEhwuUG9zdFJlZmxlY3Rpb25BbnN3ZXJSZXF1ZXN0Ghou",
-            "UG9zdFJlZmxlY3Rpb25BbnN3ZXJSZXBseRJ0CiRVcGRhdGVSZWZsZWN0aW9u",
-            "UXVlc3Rpb25BY3RpdmVTdGF0dXMSJi5VcGRhdGVSZWZsZWN0aW9uUXVlc3Rp",
-            "b25BY3RpdmVSZXF1ZXN0GiQuVXBkYXRlUmVmbGVjdGlvblF1ZXN0aW9uQWN0",
-            "aXZlUmVwbHkSYgoaR2V0UmVmbGVjdGlvbkFuc3dlcnNCeURhdGUSIi5HZXRS",
-            "ZWZsZWN0aW9uQW5zd2Vyc0J5RGF0ZVJlcXVlc3QaIC5HZXRSZWZsZWN0aW9u",
-            "QW5zd2Vyc0J5RGF0ZVJlcGx5QhiqAhVSZWZsZWN0aW9uR3JwY1NlcnZpY2Vi",
-            "BnByb3RvMw=="));
+            "aW9uUXVlc3Rpb24iPQomR2V0UmVmbGVjdGlvbkFuc3dlckJ5UXVlc3Rpb25J",
+            "ZFJlcXVlc3QSEwoLcXVlc3Rpb25faWQYASABKAMiSQokR2V0UmVmbGVjdGlv",
+            "bkFuc3dlckJ5UXVlc3Rpb25JZFJlcGx5EiEKBmFuc3dlchgBIAEoCzIRLlJl",
+            "ZmxlY3Rpb25BbnN3ZXIidgodUG9zdFJlZmxlY3Rpb25RdWVzdGlvblJlcXVl",
+            "c3QSDwoHdXNlcl9pZBgBIAEoAxIVCg1xdWVzdGlvbl90ZXh0GAIgASgJEhUK",
+            "DXNjaGVkdWxlX3R5cGUYAyABKAkSFgoOc2NoZWR1bGVfdmFsdWUYBCABKAki",
+            "LgobUG9zdFJlZmxlY3Rpb25RdWVzdGlvblJlcGx5Eg8KB21lc3NhZ2UYASAB",
+            "KAkihgEKG1Bvc3RSZWZsZWN0aW9uQW5zd2VyUmVxdWVzdBITCgtxdWVzdGlv",
+            "bl9pZBgBIAEoAxIPCgd1c2VyX2lkGAIgASgDEhYKDmFuc3dlcl9jb250ZW50",
+            "GAMgASgJEhMKC2Fuc3dlcl9kYXRlGAQgASgJEhQKDGlzX2NvbXBsZXRlZBgF",
+            "IAEoCCIsChlQb3N0UmVmbGVjdGlvbkFuc3dlclJlcGx5Eg8KB21lc3NhZ2UY",
+            "ASABKAkigAEKElJlZmxlY3Rpb25RdWVzdGlvbhITCgtxdWVzdGlvbl9pZBgB",
+            "IAEoAxIPCgd1c2VyX2lkGAIgASgDEhUKDXF1ZXN0aW9uX3RleHQYAyABKAkS",
+            "FQoNc2NoZWR1bGVfdHlwZRgEIAEoCRIWCg5zY2hlZHVsZV92YWx1ZRgFIAEo",
+            "CSKOAQoQUmVmbGVjdGlvbkFuc3dlchIRCglhbnN3ZXJfaWQYASABKAMSEwoL",
+            "cXVlc3Rpb25faWQYAiABKAMSDwoHdXNlcl9pZBgDIAEoAxIWCg5hbnN3ZXJf",
+            "Y29udGVudBgEIAEoCRITCgthbnN3ZXJfZGF0ZRgFIAEoCRIUCgxpc19jb21w",
+            "bGV0ZWQYBiABKAgiTAolVXBkYXRlUmVmbGVjdGlvblF1ZXN0aW9uQWN0aXZl",
+            "UmVxdWVzdBITCgtxdWVzdGlvbl9pZBgBIAEoAxIOCgZhY3RpdmUYAiABKAgi",
+            "NgojVXBkYXRlUmVmbGVjdGlvblF1ZXN0aW9uQWN0aXZlUmVwbHkSDwoHbWVz",
+            "c2FnZRgBIAEoCSIxCiFHZXRSZWZsZWN0aW9uQW5zd2Vyc0J5RGF0ZVJlcXVl",
+            "c3QSDAoEZGF0ZRgBIAEoCSJgCh9HZXRSZWZsZWN0aW9uQW5zd2Vyc0J5RGF0",
+            "ZVJlcGx5Ej0KFmFuc3dlcnNfd2l0aF9xdWVzdGlvbnMYASADKAsyHS5SZWZs",
+            "ZWN0aW9uQW5zd2VyV2l0aFF1ZXN0aW9uImgKHFJlZmxlY3Rpb25BbnN3ZXJX",
+            "aXRoUXVlc3Rpb24SIQoGYW5zd2VyGAEgASgLMhEuUmVmbGVjdGlvbkFuc3dl",
+            "chIlCghxdWVzdGlvbhgCIAEoCzITLlJlZmxlY3Rpb25RdWVzdGlvbjLbBAoK",
+            "UmVmbGVjdGlvbhJWChZHZXRSZWZsZWN0aW9uUXVlc3Rpb25zEh4uR2V0UmVm",
+            "bGVjdGlvblF1ZXN0aW9uc1JlcXVlc3QaHC5HZXRSZWZsZWN0aW9uUXVlc3Rp",
+            "b25zUmVwbHkScQofR2V0UmVmbGVjdGlvbkFuc3dlckJ5UXVlc3Rpb25JZBIn",
+            "LkdldFJlZmxlY3Rpb25BbnN3ZXJCeVF1ZXN0aW9uSWRSZXF1ZXN0GiUuR2V0",
+            "UmVmbGVjdGlvbkFuc3dlckJ5UXVlc3Rpb25JZFJlcGx5ElYKFlBvc3RSZWZs",
+            "ZWN0aW9uUXVlc3Rpb24SHi5Qb3N0UmVmbGVjdGlvblF1ZXN0aW9uUmVxdWVz",
+            "dBocLlBvc3RSZWZsZWN0aW9uUXVlc3Rpb25SZXBseRJQChRQb3N0UmVmbGVj",
+            "dGlvbkFuc3dlchIcLlBvc3RSZWZsZWN0aW9uQW5zd2VyUmVxdWVzdBoaLlBv",
+            "c3RSZWZsZWN0aW9uQW5zd2VyUmVwbHkSdAokVXBkYXRlUmVmbGVjdGlvblF1",
+            "ZXN0aW9uQWN0aXZlU3RhdHVzEiYuVXBkYXRlUmVmbGVjdGlvblF1ZXN0aW9u",
+            "QWN0aXZlUmVxdWVzdBokLlVwZGF0ZVJlZmxlY3Rpb25RdWVzdGlvbkFjdGl2",
+            "ZVJlcGx5EmIKGkdldFJlZmxlY3Rpb25BbnN3ZXJzQnlEYXRlEiIuR2V0UmVm",
+            "bGVjdGlvbkFuc3dlcnNCeURhdGVSZXF1ZXN0GiAuR2V0UmVmbGVjdGlvbkFu",
+            "c3dlcnNCeURhdGVSZXBseUIYqgIVUmVmbGVjdGlvbkdycGNTZXJ2aWNlYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.GetReflectionQuestionsRequest), global::ReflectionGrpcService.GetReflectionQuestionsRequest.Parser, new[]{ "UserId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.GetReflectionQuestionsReply), global::ReflectionGrpcService.GetReflectionQuestionsReply.Parser, new[]{ "Questions" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.GetReflectionQuestionByIdRequest), global::ReflectionGrpcService.GetReflectionQuestionByIdRequest.Parser, new[]{ "QuestionId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.GetReflectionQuestionByIdReply), global::ReflectionGrpcService.GetReflectionQuestionByIdReply.Parser, new[]{ "Question" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdRequest), global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdRequest.Parser, new[]{ "QuestionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdReply), global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdReply.Parser, new[]{ "Answer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.PostReflectionQuestionRequest), global::ReflectionGrpcService.PostReflectionQuestionRequest.Parser, new[]{ "UserId", "QuestionText", "ScheduleType", "ScheduleValue" }, null, null, null, null),
@@ -99,9 +92,6 @@ namespace ReflectionGrpcService {
 
   }
   #region Messages
-  /// <summary>
-  /// Request to get all reflection questions for a user
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetReflectionQuestionsRequest : pb::IMessage<GetReflectionQuestionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -300,9 +290,6 @@ namespace ReflectionGrpcService {
 
   }
 
-  /// <summary>
-  /// Reply with a list of reflection questions
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetReflectionQuestionsReply : pb::IMessage<GetReflectionQuestionsReply>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -490,420 +477,6 @@ namespace ReflectionGrpcService {
 
   }
 
-  /// <summary>
-  /// Request to get a reflection question by its ID
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class GetReflectionQuestionByIdRequest : pb::IMessage<GetReflectionQuestionByIdRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<GetReflectionQuestionByIdRequest> _parser = new pb::MessageParser<GetReflectionQuestionByIdRequest>(() => new GetReflectionQuestionByIdRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GetReflectionQuestionByIdRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetReflectionQuestionByIdRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetReflectionQuestionByIdRequest(GetReflectionQuestionByIdRequest other) : this() {
-      questionId_ = other.questionId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetReflectionQuestionByIdRequest Clone() {
-      return new GetReflectionQuestionByIdRequest(this);
-    }
-
-    /// <summary>Field number for the "question_id" field.</summary>
-    public const int QuestionIdFieldNumber = 1;
-    private long questionId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long QuestionId {
-      get { return questionId_; }
-      set {
-        questionId_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as GetReflectionQuestionByIdRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GetReflectionQuestionByIdRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (QuestionId != other.QuestionId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (QuestionId != 0L) hash ^= QuestionId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (QuestionId != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(QuestionId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (QuestionId != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(QuestionId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (QuestionId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(QuestionId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GetReflectionQuestionByIdRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.QuestionId != 0L) {
-        QuestionId = other.QuestionId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            QuestionId = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            QuestionId = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// Reply with a reflection question
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class GetReflectionQuestionByIdReply : pb::IMessage<GetReflectionQuestionByIdReply>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<GetReflectionQuestionByIdReply> _parser = new pb::MessageParser<GetReflectionQuestionByIdReply>(() => new GetReflectionQuestionByIdReply());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GetReflectionQuestionByIdReply> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[3]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetReflectionQuestionByIdReply() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetReflectionQuestionByIdReply(GetReflectionQuestionByIdReply other) : this() {
-      question_ = other.question_ != null ? other.question_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetReflectionQuestionByIdReply Clone() {
-      return new GetReflectionQuestionByIdReply(this);
-    }
-
-    /// <summary>Field number for the "question" field.</summary>
-    public const int QuestionFieldNumber = 1;
-    private global::ReflectionGrpcService.ReflectionQuestion question_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::ReflectionGrpcService.ReflectionQuestion Question {
-      get { return question_; }
-      set {
-        question_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as GetReflectionQuestionByIdReply);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GetReflectionQuestionByIdReply other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(Question, other.Question)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (question_ != null) hash ^= Question.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (question_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Question);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (question_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Question);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (question_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Question);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GetReflectionQuestionByIdReply other) {
-      if (other == null) {
-        return;
-      }
-      if (other.question_ != null) {
-        if (question_ == null) {
-          Question = new global::ReflectionGrpcService.ReflectionQuestion();
-        }
-        Question.MergeFrom(other.Question);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (question_ == null) {
-              Question = new global::ReflectionGrpcService.ReflectionQuestion();
-            }
-            input.ReadMessage(Question);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (question_ == null) {
-              Question = new global::ReflectionGrpcService.ReflectionQuestion();
-            }
-            input.ReadMessage(Question);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// Request to get an answer to a reflection question by question ID
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetReflectionAnswerByQuestionIdRequest : pb::IMessage<GetReflectionAnswerByQuestionIdRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -919,7 +492,7 @@ namespace ReflectionGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[4]; }
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1102,9 +675,6 @@ namespace ReflectionGrpcService {
 
   }
 
-  /// <summary>
-  /// Reply with a reflection answer
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetReflectionAnswerByQuestionIdReply : pb::IMessage<GetReflectionAnswerByQuestionIdReply>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1120,7 +690,7 @@ namespace ReflectionGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[5]; }
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1312,9 +882,6 @@ namespace ReflectionGrpcService {
 
   }
 
-  /// <summary>
-  /// Request to post a new reflection question
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PostReflectionQuestionRequest : pb::IMessage<PostReflectionQuestionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1330,7 +897,7 @@ namespace ReflectionGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[6]; }
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1624,9 +1191,6 @@ namespace ReflectionGrpcService {
 
   }
 
-  /// <summary>
-  /// Reply for posting a reflection question
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PostReflectionQuestionReply : pb::IMessage<PostReflectionQuestionReply>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1642,7 +1206,7 @@ namespace ReflectionGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[7]; }
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1828,9 +1392,6 @@ namespace ReflectionGrpcService {
 
   }
 
-  /// <summary>
-  /// Request to post an answer to a reflection question
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PostReflectionAnswerRequest : pb::IMessage<PostReflectionAnswerRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1846,7 +1407,7 @@ namespace ReflectionGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[8]; }
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2177,9 +1738,6 @@ namespace ReflectionGrpcService {
 
   }
 
-  /// <summary>
-  /// Reply for posting a reflection answer
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PostReflectionAnswerReply : pb::IMessage<PostReflectionAnswerReply>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2195,7 +1753,7 @@ namespace ReflectionGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[9]; }
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2378,9 +1936,6 @@ namespace ReflectionGrpcService {
 
   }
 
-  /// <summary>
-  /// Reflection Question message
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReflectionQuestion : pb::IMessage<ReflectionQuestion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2396,7 +1951,7 @@ namespace ReflectionGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[10]; }
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2727,9 +2282,6 @@ namespace ReflectionGrpcService {
 
   }
 
-  /// <summary>
-  /// Reflection Answer message
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReflectionAnswer : pb::IMessage<ReflectionAnswer>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2745,7 +2297,7 @@ namespace ReflectionGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[11]; }
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3113,9 +2665,6 @@ namespace ReflectionGrpcService {
 
   }
 
-  /// <summary>
-  /// Request to toggle the active status of a reflection question
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateReflectionQuestionActiveRequest : pb::IMessage<UpdateReflectionQuestionActiveRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3131,7 +2680,7 @@ namespace ReflectionGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[12]; }
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3351,9 +2900,6 @@ namespace ReflectionGrpcService {
 
   }
 
-  /// <summary>
-  /// Reply for updating the active status
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateReflectionQuestionActiveReply : pb::IMessage<UpdateReflectionQuestionActiveReply>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3369,7 +2915,7 @@ namespace ReflectionGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[13]; }
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3555,9 +3101,6 @@ namespace ReflectionGrpcService {
 
   }
 
-  /// <summary>
-  /// Request to get all reflection answers for a specific date
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetReflectionAnswersByDateRequest : pb::IMessage<GetReflectionAnswersByDateRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3573,7 +3116,7 @@ namespace ReflectionGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[14]; }
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3759,9 +3302,6 @@ namespace ReflectionGrpcService {
 
   }
 
-  /// <summary>
-  /// Reply with a list of reflection answers and their questions
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetReflectionAnswersByDateReply : pb::IMessage<GetReflectionAnswersByDateReply>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3777,7 +3317,7 @@ namespace ReflectionGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[15]; }
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3952,9 +3492,6 @@ namespace ReflectionGrpcService {
 
   }
 
-  /// <summary>
-  /// A message combining an answer and its question
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReflectionAnswerWithQuestion : pb::IMessage<ReflectionAnswerWithQuestion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3970,7 +3507,7 @@ namespace ReflectionGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[16]; }
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

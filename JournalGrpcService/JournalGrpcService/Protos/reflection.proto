@@ -2,60 +2,36 @@ syntax = "proto3";
 
 option csharp_namespace = "ReflectionGrpcService";
 
-// Reflection Service Definition
 service Reflection {
-  // Retrieves all reflection questions for a user
   rpc GetReflectionQuestions(GetReflectionQuestionsRequest) returns (GetReflectionQuestionsReply);
 
-  // Retrieves a specific reflection question by its ID
-  rpc GetReflectionQuestionById(GetReflectionQuestionByIdRequest) returns (GetReflectionQuestionByIdReply);
-
-  // Retrieves an answer to a reflection question by question ID
   rpc GetReflectionAnswerByQuestionId(GetReflectionAnswerByQuestionIdRequest) returns (GetReflectionAnswerByQuestionIdReply);
 
-  // Posts a new reflection question
   rpc PostReflectionQuestion(PostReflectionQuestionRequest) returns (PostReflectionQuestionReply);
 
-  // Posts an answer to a reflection question
   rpc PostReflectionAnswer(PostReflectionAnswerRequest) returns (PostReflectionAnswerReply);
 
-  // Updates the active status of a reflection question
   rpc UpdateReflectionQuestionActiveStatus(UpdateReflectionQuestionActiveRequest) returns (UpdateReflectionQuestionActiveReply);
 
-    // Retrieves all reflection answers for a specific date
  rpc GetReflectionAnswersByDate(GetReflectionAnswersByDateRequest) returns (GetReflectionAnswersByDateReply);}
 
-// Request to get all reflection questions for a user
 message GetReflectionQuestionsRequest {
   int64 user_id = 1; 
 }
 
-// Reply with a list of reflection questions
 message GetReflectionQuestionsReply {
   repeated ReflectionQuestion questions = 1; 
 }
 
-// Request to get a reflection question by its ID
-message GetReflectionQuestionByIdRequest {
-  int64 question_id = 1; 
-}
 
-// Reply with a reflection question
-message GetReflectionQuestionByIdReply {
-  ReflectionQuestion question = 1; 
-}
-
-// Request to get an answer to a reflection question by question ID
 message GetReflectionAnswerByQuestionIdRequest {
   int64 question_id = 1; 
 }
 
-// Reply with a reflection answer
 message GetReflectionAnswerByQuestionIdReply {
   ReflectionAnswer answer = 1; 
 }
 
-// Request to post a new reflection question
 message PostReflectionQuestionRequest {
   int64 user_id = 1;          
   string question_text = 2;   
@@ -63,12 +39,10 @@ message PostReflectionQuestionRequest {
   string schedule_value = 4;  
 }
 
-// Reply for posting a reflection question
 message PostReflectionQuestionReply {
   string message = 1; // Response message
 }
 
-// Request to post an answer to a reflection question
 message PostReflectionAnswerRequest {
   int64 question_id = 1;       
   int64 user_id = 2;           
@@ -77,12 +51,10 @@ message PostReflectionAnswerRequest {
   bool is_completed = 5;       
 }
 
-// Reply for posting a reflection answer
 message PostReflectionAnswerReply {
   string message = 1; 
 }
 
-// Reflection Question message
 message ReflectionQuestion {
   int64 question_id = 1;       
   int64 user_id = 2;           
@@ -91,7 +63,6 @@ message ReflectionQuestion {
   string schedule_value = 5;   
 }
 
-// Reflection Answer message
 message ReflectionAnswer {
   int64 answer_id = 1;         
   int64 question_id = 2;       
@@ -101,28 +72,23 @@ message ReflectionAnswer {
   bool is_completed = 6;       
 }
 
-// Request to toggle the active status of a reflection question
 message UpdateReflectionQuestionActiveRequest {
   int64 question_id = 1;  
   bool active = 2;        
 }
 
-// Reply for updating the active status
 message UpdateReflectionQuestionActiveReply {
   string message = 1; // Response message
 }
 
-// Request to get all reflection answers for a specific date
 message GetReflectionAnswersByDateRequest {
   string date = 1; // (e.g., "2025-01-25")
 }
 
-// Reply with a list of reflection answers and their questions
 message GetReflectionAnswersByDateReply {
   repeated ReflectionAnswerWithQuestion answers_with_questions = 1; // List of answers with questions
 }
 
-// A message combining an answer and its question
 message ReflectionAnswerWithQuestion {
   ReflectionAnswer answer = 1;       
   ReflectionQuestion question = 2;  

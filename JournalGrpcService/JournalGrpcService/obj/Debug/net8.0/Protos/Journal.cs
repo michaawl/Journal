@@ -29,32 +29,26 @@ namespace JournalGrpcService {
             "cGx5EiMKB2VudHJpZXMYASADKAsyEi5Kb3VybmFsRW50cnlSZXBseSJlChFK",
             "b3VybmFsRW50cnlSZXBseRIQCghlbnRyeV9pZBgBIAEoAxITCgtlbnRyeV90",
             "aXRsZRgCIAEoCRIVCg1lbnRyeV9jb250ZW50GAMgASgJEhIKCmVudHJ5X2Rh",
-            "dGUYBCABKAkiKgoWR2V0Sm91cm5hbEVudHJ5UmVxdWVzdBIQCghlbnRyeV9p",
-            "ZBgBIAEoAyJWChRHZXRKb3VybmFsRW50cnlSZXBseRITCgtlbnRyeV90aXRs",
-            "ZRgBIAEoCRIVCg1lbnRyeV9jb250ZW50GAIgASgJEhIKCmVudHJ5X2RhdGUY",
-            "AyABKAkijgEKF1Bvc3RKb3VybmFsRW50cnlSZXF1ZXN0Eg8KB3VzZXJfaWQY",
-            "ASABKAMSEwoLZW50cnlfdGl0bGUYAiABKAkSFQoNZW50cnlfY29udGVudBgD",
-            "IAEoCRISCgplbnRyeV9kYXRlGAQgASgJEhUKCGVudHJ5X2lkGAUgASgDSACI",
-            "AQFCCwoJX2VudHJ5X2lkIigKFVBvc3RKb3VybmFsRW50cnlSZXBseRIPCgdt",
-            "ZXNzYWdlGAEgASgJIiIKD0dldFVzZXJzUmVxdWVzdBIPCgd1c2VyX2lkGAEg",
-            "ASgDIikKDUdldFVzZXJzUmVwbHkSGAoEdXNlchgBIAEoCzIKLlVzZXJSZXBs",
-            "eSJRCglVc2VyUmVwbHkSDwoHdXNlcl9pZBgBIAEoAxIQCgh1c2VybmFtZRgC",
-            "IAEoCRINCgVlbWFpbBgDIAEoCRISCgpjcmVhdGVkX2F0GAQgASgJMokCCgdK",
-            "b3VybmFsEkcKEUdldEpvdXJuYWxFbnRyaWVzEhkuR2V0Sm91cm5hbEVudHJp",
-            "ZXNSZXF1ZXN0GhcuR2V0Sm91cm5hbEVudHJpZXNSZXBseRJBCg9HZXRKb3Vy",
-            "bmFsRW50cnkSFy5HZXRKb3VybmFsRW50cnlSZXF1ZXN0GhUuR2V0Sm91cm5h",
-            "bEVudHJ5UmVwbHkSRAoQUG9zdEpvdXJuYWxFbnRyeRIYLlBvc3RKb3VybmFs",
-            "RW50cnlSZXF1ZXN0GhYuUG9zdEpvdXJuYWxFbnRyeVJlcGx5EiwKCEdldFVz",
-            "ZXJzEhAuR2V0VXNlcnNSZXF1ZXN0Gg4uR2V0VXNlcnNSZXBseUIVqgISSm91",
-            "cm5hbEdycGNTZXJ2aWNlYgZwcm90bzM="));
+            "dGUYBCABKAkijgEKF1Bvc3RKb3VybmFsRW50cnlSZXF1ZXN0Eg8KB3VzZXJf",
+            "aWQYASABKAMSEwoLZW50cnlfdGl0bGUYAiABKAkSFQoNZW50cnlfY29udGVu",
+            "dBgDIAEoCRISCgplbnRyeV9kYXRlGAQgASgJEhUKCGVudHJ5X2lkGAUgASgD",
+            "SACIAQFCCwoJX2VudHJ5X2lkIigKFVBvc3RKb3VybmFsRW50cnlSZXBseRIP",
+            "CgdtZXNzYWdlGAEgASgJIiIKD0dldFVzZXJzUmVxdWVzdBIPCgd1c2VyX2lk",
+            "GAEgASgDIikKDUdldFVzZXJzUmVwbHkSGAoEdXNlchgBIAEoCzIKLlVzZXJS",
+            "ZXBseSJRCglVc2VyUmVwbHkSDwoHdXNlcl9pZBgBIAEoAxIQCgh1c2VybmFt",
+            "ZRgCIAEoCRINCgVlbWFpbBgDIAEoCRISCgpjcmVhdGVkX2F0GAQgASgJMsYB",
+            "CgdKb3VybmFsEkcKEUdldEpvdXJuYWxFbnRyaWVzEhkuR2V0Sm91cm5hbEVu",
+            "dHJpZXNSZXF1ZXN0GhcuR2V0Sm91cm5hbEVudHJpZXNSZXBseRJEChBQb3N0",
+            "Sm91cm5hbEVudHJ5EhguUG9zdEpvdXJuYWxFbnRyeVJlcXVlc3QaFi5Qb3N0",
+            "Sm91cm5hbEVudHJ5UmVwbHkSLAoIR2V0VXNlcnMSEC5HZXRVc2Vyc1JlcXVl",
+            "c3QaDi5HZXRVc2Vyc1JlcGx5QhWqAhJKb3VybmFsR3JwY1NlcnZpY2ViBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::JournalGrpcService.GetJournalEntriesRequest), global::JournalGrpcService.GetJournalEntriesRequest.Parser, new[]{ "UserId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::JournalGrpcService.GetJournalEntriesReply), global::JournalGrpcService.GetJournalEntriesReply.Parser, new[]{ "Entries" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::JournalGrpcService.JournalEntryReply), global::JournalGrpcService.JournalEntryReply.Parser, new[]{ "EntryId", "EntryTitle", "EntryContent", "EntryDate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JournalGrpcService.GetJournalEntryRequest), global::JournalGrpcService.GetJournalEntryRequest.Parser, new[]{ "EntryId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::JournalGrpcService.GetJournalEntryReply), global::JournalGrpcService.GetJournalEntryReply.Parser, new[]{ "EntryTitle", "EntryContent", "EntryDate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::JournalGrpcService.PostJournalEntryRequest), global::JournalGrpcService.PostJournalEntryRequest.Parser, new[]{ "UserId", "EntryTitle", "EntryContent", "EntryDate", "EntryId" }, new[]{ "EntryId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::JournalGrpcService.PostJournalEntryReply), global::JournalGrpcService.PostJournalEntryReply.Parser, new[]{ "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::JournalGrpcService.GetUsersRequest), global::JournalGrpcService.GetUsersRequest.Parser, new[]{ "UserId" }, null, null, null, null),
@@ -767,476 +761,6 @@ namespace JournalGrpcService {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class GetJournalEntryRequest : pb::IMessage<GetJournalEntryRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<GetJournalEntryRequest> _parser = new pb::MessageParser<GetJournalEntryRequest>(() => new GetJournalEntryRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GetJournalEntryRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::JournalGrpcService.JournalReflection.Descriptor.MessageTypes[3]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetJournalEntryRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetJournalEntryRequest(GetJournalEntryRequest other) : this() {
-      entryId_ = other.entryId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetJournalEntryRequest Clone() {
-      return new GetJournalEntryRequest(this);
-    }
-
-    /// <summary>Field number for the "entry_id" field.</summary>
-    public const int EntryIdFieldNumber = 1;
-    private long entryId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long EntryId {
-      get { return entryId_; }
-      set {
-        entryId_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as GetJournalEntryRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GetJournalEntryRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (EntryId != other.EntryId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (EntryId != 0L) hash ^= EntryId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (EntryId != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(EntryId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EntryId != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(EntryId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (EntryId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EntryId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GetJournalEntryRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.EntryId != 0L) {
-        EntryId = other.EntryId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            EntryId = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            EntryId = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class GetJournalEntryReply : pb::IMessage<GetJournalEntryReply>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<GetJournalEntryReply> _parser = new pb::MessageParser<GetJournalEntryReply>(() => new GetJournalEntryReply());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GetJournalEntryReply> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::JournalGrpcService.JournalReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetJournalEntryReply() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetJournalEntryReply(GetJournalEntryReply other) : this() {
-      entryTitle_ = other.entryTitle_;
-      entryContent_ = other.entryContent_;
-      entryDate_ = other.entryDate_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetJournalEntryReply Clone() {
-      return new GetJournalEntryReply(this);
-    }
-
-    /// <summary>Field number for the "entry_title" field.</summary>
-    public const int EntryTitleFieldNumber = 1;
-    private string entryTitle_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string EntryTitle {
-      get { return entryTitle_; }
-      set {
-        entryTitle_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "entry_content" field.</summary>
-    public const int EntryContentFieldNumber = 2;
-    private string entryContent_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string EntryContent {
-      get { return entryContent_; }
-      set {
-        entryContent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "entry_date" field.</summary>
-    public const int EntryDateFieldNumber = 3;
-    private string entryDate_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string EntryDate {
-      get { return entryDate_; }
-      set {
-        entryDate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as GetJournalEntryReply);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GetJournalEntryReply other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (EntryTitle != other.EntryTitle) return false;
-      if (EntryContent != other.EntryContent) return false;
-      if (EntryDate != other.EntryDate) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (EntryTitle.Length != 0) hash ^= EntryTitle.GetHashCode();
-      if (EntryContent.Length != 0) hash ^= EntryContent.GetHashCode();
-      if (EntryDate.Length != 0) hash ^= EntryDate.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (EntryTitle.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(EntryTitle);
-      }
-      if (EntryContent.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(EntryContent);
-      }
-      if (EntryDate.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(EntryDate);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EntryTitle.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(EntryTitle);
-      }
-      if (EntryContent.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(EntryContent);
-      }
-      if (EntryDate.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(EntryDate);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (EntryTitle.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EntryTitle);
-      }
-      if (EntryContent.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EntryContent);
-      }
-      if (EntryDate.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EntryDate);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GetJournalEntryReply other) {
-      if (other == null) {
-        return;
-      }
-      if (other.EntryTitle.Length != 0) {
-        EntryTitle = other.EntryTitle;
-      }
-      if (other.EntryContent.Length != 0) {
-        EntryContent = other.EntryContent;
-      }
-      if (other.EntryDate.Length != 0) {
-        EntryDate = other.EntryDate;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            EntryTitle = input.ReadString();
-            break;
-          }
-          case 18: {
-            EntryContent = input.ReadString();
-            break;
-          }
-          case 26: {
-            EntryDate = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            EntryTitle = input.ReadString();
-            break;
-          }
-          case 18: {
-            EntryContent = input.ReadString();
-            break;
-          }
-          case 26: {
-            EntryDate = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PostJournalEntryRequest : pb::IMessage<PostJournalEntryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1252,7 +776,7 @@ namespace JournalGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JournalGrpcService.JournalReflection.Descriptor.MessageTypes[5]; }
+      get { return global::JournalGrpcService.JournalReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1617,7 +1141,7 @@ namespace JournalGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JournalGrpcService.JournalReflection.Descriptor.MessageTypes[6]; }
+      get { return global::JournalGrpcService.JournalReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1818,7 +1342,7 @@ namespace JournalGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JournalGrpcService.JournalReflection.Descriptor.MessageTypes[7]; }
+      get { return global::JournalGrpcService.JournalReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2016,7 +1540,7 @@ namespace JournalGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JournalGrpcService.JournalReflection.Descriptor.MessageTypes[8]; }
+      get { return global::JournalGrpcService.JournalReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2223,7 +1747,7 @@ namespace JournalGrpcService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::JournalGrpcService.JournalReflection.Descriptor.MessageTypes[9]; }
+      get { return global::JournalGrpcService.JournalReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

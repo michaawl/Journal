@@ -2,7 +2,7 @@
 module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
     theme: {
-      extend: {},
+      extend: {}, //Standard Tailwind theme wird verwendet
     },
     plugins: [require('daisyui')],
   };
