@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReflectionService from '../services/reflection-service';
 
-// Enum for schedule types
 enum ScheduleType {
   Yearly = 'Yearly',
   Monthly = 'Monthly',
@@ -9,7 +8,6 @@ enum ScheduleType {
   Daily = 'Daily',
 }
 
-// Interface for a Reflection Question
 interface IReflectionQuestion {
   questionId: number;
   userId: number;
@@ -18,7 +16,7 @@ interface IReflectionQuestion {
   scheduleValue: string;
 }
 
-export const Statistics: React.FC = () => {
+export const Reflections: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [questions, setQuestions] = useState<IReflectionQuestion[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -27,15 +25,14 @@ export const Statistics: React.FC = () => {
 
   const reflectionService = new ReflectionService();
 
-  // Fetch reflection questions and filter based on today's schedule and answers
   const fetchReflectionQuestions = async () => {
     setLoading(true);
     setError(null);
-  
+
     try {
       const response = await reflectionService.getReflectionQuestions(1);
       const questions = response.questionsList || [];
-  
+
       const mappedQuestions = questions.map((q: any) => ({
         questionId: q.questionId,
         userId: q.userId,
@@ -43,13 +40,10 @@ export const Statistics: React.FC = () => {
         scheduleType: q.scheduleType as ScheduleType,
         scheduleValue: q.scheduleValue,
       }));
-  
-      // Filter questions for today's schedule
+
       const todaysQuestions = getTodaysQuestions(mappedQuestions);
-  
-      // Filter out questions with answers for today
       const filteredQuestions = await filterQuestionsWithAnswers(todaysQuestions);
-  
+
       setQuestions(filteredQuestions);
     } catch (err: any) {
       setError(err.message);
@@ -58,15 +52,12 @@ export const Statistics: React.FC = () => {
       setLoading(false);
     }
   };
-  
 
-  // Get today's date in the required format
   const getTodayDateString = () => {
     const today = new Date();
-    return today.toLocaleDateString('en-CA'); // Format as YYYY-MM-DD
+    return today.toLocaleDateString('en-CA');
   };
 
-  // Filter questions to show only those for today
   const getTodaysQuestions = (questions: IReflectionQuestion[]) => {
     const today = new Date();
     return questions.filter((question) => {
@@ -99,54 +90,27 @@ export const Statistics: React.FC = () => {
     });
   };
 
-  // Filter out questions with answers for today
   const filterQuestionsWithAnswers = async (questions: IReflectionQuestion[]) => {
-    const todayDateString = getTodayDateString(); // Get today's date in YYYY-MM-DD format
+    const todayDateString = getTodayDateString();
     const filteredQuestions: IReflectionQuestion[] = [];
-    
+
     for (const question of questions) {
-      console.log(`Processing question ID ${question.questionId} with text: "${question.questionText}"`);
       try {
         const answer = await reflectionService.getReflectionAnswerByQuestionId(question.questionId);
-  
-        // Log the raw answer object to verify its structure
-        console.log(`Raw answer object for question ID ${question.questionId}:`, answer);
-  
-        if (answer) {
-          console.log(
-            `Answer retrieved for question ID ${question.questionId}: Answer ID ${answer.answerId}, Date: ${answer.answerDate}, Is Completed: ${answer.isCompleted}`
-          );
-  
-          const hasAnswerToday = answer.answerDate && answer.answerDate.startsWith(todayDateString);
-          if (hasAnswerToday) {
-            console.log(
-              `Answer for question ID ${question.questionId} matches today's date (${todayDateString}). Excluding this question.`
-            );
-          } else {
-            console.log(
-              `Answer for question ID ${question.questionId} does not match today's date. Including this question.`
-            );
-            filteredQuestions.push(question);
-          }
-        } else {
-          console.log(`No answer found for question ID ${question.questionId}. Including this question.`);
-          filteredQuestions.push(question);
-        }
-      } catch (err) {
-        console.error(`Error retrieving answer for question ID ${question.questionId}:`, err);
 
-        console.log(`Including question ID ${question.questionId} due to error.`);
+        if (answer?.answerDate && answer.answerDate.startsWith(todayDateString)) {
+          continue;
+        }
+
+        filteredQuestions.push(question);
+      } catch {
         filteredQuestions.push(question);
       }
     }
-  
-    console.log(`Filtering complete. ${filteredQuestions.length} questions remain.`);
+
     return filteredQuestions;
   };
-  
-  
-  
-  // Handle input change for answers
+
   const handleAnswerChange = (questionId: number, value: string) => {
     setAnswers((prev) => ({
       ...prev,
@@ -154,7 +118,6 @@ export const Statistics: React.FC = () => {
     }));
   };
 
-  // Post answer to the server
   const postAnswer = async (questionId: number) => {
     const answerContent = answers[questionId];
 
@@ -168,10 +131,10 @@ export const Statistics: React.FC = () => {
     try {
       const response = await reflectionService.postReflectionAnswer(
         questionId,
-        1, // Example userId
+        1,
         answerContent,
         new Date().toISOString(),
-        true // Mark as completed
+        true
       );
       setPostMessage(`Answer posted successfully: ${response.message}`);
     } catch (err: any) {
@@ -184,62 +147,38 @@ export const Statistics: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <button
-        onClick={fetchReflectionQuestions}
-        style={{
-          backgroundColor: 'yellow',
-          padding: '10px',
-          fontSize: '16px',
-          cursor: 'pointer',
-          border: 'none',
-        }}
-      >
-        Reload Questions
-      </button>
+    <div className="container py-4 bg-dark text-light">
+      <h2 className="mb-4 text-center fw-bold fs-5">Today's Reflection Questions</h2>
 
-      {error && <p style={{ color: 'red' }}>Error: {error}</p>}
-      {loading && <p>Loading...</p>}
 
-      <div>
-        <h2>Today's Reflection Questions</h2>
-        {questions.length > 0 ? (
-          questions.map((question) => (
-            <div key={question.questionId} style={{ marginBottom: '1rem' }}>
-              <h3>Question:</h3>
-              <p>{question.questionText}</p>
-              <p>
-                <strong>Schedule Type:</strong> {question.scheduleType}
-              </p>
-              <p>
-                <strong>Schedule Date:</strong> {question.scheduleValue}
-              </p>
+      {error && <p className="text-danger">{error}</p>}
+      {loading && <p className="text-info">Loading...</p>}
+
+      {questions.length > 0 ? (
+        <section className="p-4 bg-dark-subtle rounded border border-secondary">
+          {questions.map((question) => (
+            <div key={question.questionId} className="mb-4">
+              <h5 className="fw-bold mb-3">{question.questionText}</h5> {/* Added mb-3 */}
               <textarea
+                className="form-control bg-secondary-subtle text-light border-secondary mb-3"
                 placeholder="Write your answer here..."
                 value={answers[question.questionId] || ''}
                 onChange={(e) => handleAnswerChange(question.questionId, e.target.value)}
-                style={{ width: '100%', padding: '8px', marginBottom: '8px' }}
               />
               <button
                 onClick={() => postAnswer(question.questionId)}
-                style={{
-                  backgroundColor: 'blue',
-                  color: 'white',
-                  padding: '10px',
-                  cursor: 'pointer',
-                  border: 'none',
-                }}
+                className="btn btn-primary"
               >
                 Submit Answer
               </button>
             </div>
-          ))
-        ) : (
-          <p>No questions scheduled for today</p>
-        )}
-      </div>
+          ))}
+        </section>
+      ) : (
+        <p className="text-muted">No questions scheduled for today.</p>
+      )}
 
-      {postMessage && <p style={{ color: 'green' }}>{postMessage}</p>}
+      {postMessage && <p className="text-success mt-3">{postMessage}</p>}
     </div>
   );
 };

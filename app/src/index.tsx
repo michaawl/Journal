@@ -5,10 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import { Layout } from './components/Layout'
-import { Work } from './pages/Work'
+import { Questions } from './pages/Questions'
 import { Calendar } from './pages/Calendar'
 import { JournalEntry } from './pages/JournalEntry'
-import { Statistics } from './pages/Statistics'
+import { Reflections } from './pages/Reflections'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -19,8 +19,8 @@ root.render(
         <Routes>
             <Route path='/' element={<Layout/>}>
             <Route index element={<Calendar />} /> 
-            <Route path='/statistics' element={<Statistics/>} />
-            <Route path='/settings' element={<Work/>} />
+            <Route path='/reflections' element={<Reflections/>} />
+            <Route path='/questions' element={<Questions/>} />
             <Route path="/journalEntry" element={<JournalEntry />} />
           </Route>
         </Routes>
