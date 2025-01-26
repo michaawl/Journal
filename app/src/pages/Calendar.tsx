@@ -5,18 +5,10 @@ import interactionPlugin from "@fullcalendar/interaction";
 import { useNavigate } from 'react-router-dom';
 import JournalService from '../services/journal-service';
 import ReflectionService from '../services/reflection-service';
-
-interface CalendarEvent {
-  displayTitle: string;
-  actualTitle: string;
-  entryId?: number;
-  content?: string;
-  date: string;
-  allDay: boolean;
-}
+import ICalendarEvent from '../interfaces/ICalendarEvent';
 
 export const Calendar: React.FC = () => {
-  const [events, setEvents] = useState<CalendarEvent[]>([]);
+  const [events, setEvents] = useState<ICalendarEvent[]>([]);
   const navigate = useNavigate();
   const journalService = new JournalService();
   const reflectionService = new ReflectionService();
@@ -61,7 +53,7 @@ export const Calendar: React.FC = () => {
   };
 
   const fetchReflectionAnswersByDates = async (dates: string[]) => {
-    const reflectionEvents: CalendarEvent[] = [];
+    const reflectionEvents: ICalendarEvent[] = [];
     for (const date of dates) {
       try {
         const response = await reflectionService.getReflectionAnswersByDate(date);

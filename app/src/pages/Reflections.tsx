@@ -1,20 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ReflectionService from '../services/reflection-service';
+import IReflectionQuestion from '../interfaces/IReflectionQuestion';
+import { ScheduleType } from '../interfaces/ScheduleType';
 
-enum ScheduleType {
-  Yearly = 'Yearly',
-  Monthly = 'Monthly',
-  Weekly = 'Weekly',
-  Daily = 'Daily',
-}
-
-interface IReflectionQuestion {
-  questionId: number;
-  userId: number;
-  questionText: string;
-  scheduleType: ScheduleType;
-  scheduleValue: string;
-}
 
 export const Reflections: React.FC = () => {
   const [loading, setLoading] = useState(false);

@@ -2,21 +2,8 @@ import React, { useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import ReflectionService from '../services/reflection-service';
-
-enum ScheduleType {
-    Yearly = 'Yearly',
-    Monthly = 'Monthly',
-    Weekly = 'Weekly',
-    Daily = 'Daily',
-}
-
-interface IReflectionQuestion {
-    questionId: number;
-    userId: number;
-    questionText: string;
-    scheduleType: ScheduleType;
-    scheduleValue: string;
-}
+import IReflectionQuestion from '../interfaces/IReflectionQuestion';
+import { ScheduleType } from '../interfaces/ScheduleType';
 
 export const Questions: React.FC = () => {
     const [questions, setQuestions] = useState<IReflectionQuestion[]>([]);
