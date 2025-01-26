@@ -378,5 +378,127 @@ proto.ReflectionPromiseClient.prototype.postReflectionAnswer =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.UpdateReflectionQuestionActiveRequest,
+ *   !proto.UpdateReflectionQuestionActiveReply>}
+ */
+const methodDescriptor_Reflection_UpdateReflectionQuestionActiveStatus = new grpc.web.MethodDescriptor(
+  '/Reflection/UpdateReflectionQuestionActiveStatus',
+  grpc.web.MethodType.UNARY,
+  proto.UpdateReflectionQuestionActiveRequest,
+  proto.UpdateReflectionQuestionActiveReply,
+  /**
+   * @param {!proto.UpdateReflectionQuestionActiveRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.UpdateReflectionQuestionActiveReply.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.UpdateReflectionQuestionActiveRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.UpdateReflectionQuestionActiveReply)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.UpdateReflectionQuestionActiveReply>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ReflectionClient.prototype.updateReflectionQuestionActiveStatus =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/Reflection/UpdateReflectionQuestionActiveStatus',
+      request,
+      metadata || {},
+      methodDescriptor_Reflection_UpdateReflectionQuestionActiveStatus,
+      callback);
+};
+
+
+/**
+ * @param {!proto.UpdateReflectionQuestionActiveRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.UpdateReflectionQuestionActiveReply>}
+ *     Promise that resolves to the response
+ */
+proto.ReflectionPromiseClient.prototype.updateReflectionQuestionActiveStatus =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/Reflection/UpdateReflectionQuestionActiveStatus',
+      request,
+      metadata || {},
+      methodDescriptor_Reflection_UpdateReflectionQuestionActiveStatus);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.GetReflectionAnswersByDateRequest,
+ *   !proto.GetReflectionAnswersByDateReply>}
+ */
+const methodDescriptor_Reflection_GetReflectionAnswersByDate = new grpc.web.MethodDescriptor(
+  '/Reflection/GetReflectionAnswersByDate',
+  grpc.web.MethodType.UNARY,
+  proto.GetReflectionAnswersByDateRequest,
+  proto.GetReflectionAnswersByDateReply,
+  /**
+   * @param {!proto.GetReflectionAnswersByDateRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.GetReflectionAnswersByDateReply.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.GetReflectionAnswersByDateRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.GetReflectionAnswersByDateReply)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.GetReflectionAnswersByDateReply>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ReflectionClient.prototype.getReflectionAnswersByDate =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/Reflection/GetReflectionAnswersByDate',
+      request,
+      metadata || {},
+      methodDescriptor_Reflection_GetReflectionAnswersByDate,
+      callback);
+};
+
+
+/**
+ * @param {!proto.GetReflectionAnswersByDateRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.GetReflectionAnswersByDateReply>}
+ *     Promise that resolves to the response
+ */
+proto.ReflectionPromiseClient.prototype.getReflectionAnswersByDate =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/Reflection/GetReflectionAnswersByDate',
+      request,
+      metadata || {},
+      methodDescriptor_Reflection_GetReflectionAnswersByDate);
+};
+
+
 module.exports = proto;
 

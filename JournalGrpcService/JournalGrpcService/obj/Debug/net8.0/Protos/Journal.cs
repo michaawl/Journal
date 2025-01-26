@@ -1327,7 +1327,7 @@ namespace JournalGrpcService {
     public const int EntryDateFieldNumber = 4;
     private string entryDate_ = "";
     /// <summary>
-    /// Entry date as a string (e.g., "2025-01-11 12:00:00")
+    /// e.g., "2025-01-11 12:00:00"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1343,9 +1343,6 @@ namespace JournalGrpcService {
     private readonly static long EntryIdDefaultValue = 0L;
 
     private long entryId_;
-    /// <summary>
-    /// Optional field for update scenarios
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long EntryId {

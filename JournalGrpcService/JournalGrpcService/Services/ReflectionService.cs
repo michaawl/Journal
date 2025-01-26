@@ -21,7 +21,10 @@ namespace JournalGrpcService.Services
         public override async Task<GetReflectionQuestionsReply> GetReflectionQuestions(GetReflectionQuestionsRequest request, ServerCallContext context)
         {
             string connectionString = "Server=localhost;Database=master;Integrated Security=true;";
-            string query = "SELECT question_id, user_id, question_text, schedule_type, schedule_value FROM ReflectionQuestions WHERE user_id = @UserId";
+            string query = @"
+        SELECT question_id, user_id, question_text, schedule_type, schedule_value 
+        FROM ReflectionQuestions 
+        WHERE user_id = @UserId AND active = 1"; // Only include active questions
 
             var reply = new GetReflectionQuestionsReply();
 
@@ -115,7 +118,12 @@ namespace JournalGrpcService.Services
         public override async Task<GetReflectionAnswerByQuestionIdReply> GetReflectionAnswerByQuestionId(GetReflectionAnswerByQuestionIdRequest request, ServerCallContext context)
         {
             string connectionString = "Server=localhost;Database=master;Integrated Security=true;";
-            string query = "SELECT answer_id, question_id, user_id, answer_content, answer_date, is_completed FROM ReflectionAnswers WHERE question_id = @QuestionId";
+            string query = @"
+        SELECT TOP 1 
+            answer_id, question_id, user_id, answer_content, answer_date, is_completed
+        FROM ReflectionAnswers 
+        WHERE question_id = @QuestionId
+        ORDER BY answer_date DESC";
 
             var reply = new GetReflectionAnswerByQuestionIdReply();
 
@@ -134,15 +142,27 @@ namespace JournalGrpcService.Services
                         {
                             if (await reader.ReadAsync())
                             {
+                                // Fetch answer_date as DateTime and format it as a string
+                                DateTime answerDate = reader.GetDateTime(4);
+
                                 reply.Answer = new ReflectionAnswer
                                 {
-                                    AnswerId = reader.GetInt64(0),
-                                    QuestionId = reader.GetInt64(1),
-                                    UserId = reader.GetInt64(2),
+                                    AnswerId = reader.GetInt32(0),
+                                    QuestionId = reader.GetInt32(1),
+                                    UserId = reader.GetInt32(2),
                                     AnswerContent = reader.GetString(3),
-                                    AnswerDate = reader.GetString(4),
+                                    AnswerDate = answerDate.ToString("yyyy-MM-dd"), // Format the DateTime to string
                                     IsCompleted = reader.GetBoolean(5)
                                 };
+
+                                _logger.LogInformation(
+                                    "Answer retrieved for question ID {QuestionId}: Answer ID {AnswerId}, User ID {UserId}, Date {AnswerDate}, Is Completed {IsCompleted}",
+                                    reply.Answer.QuestionId,
+                                    reply.Answer.AnswerId,
+                                    reply.Answer.UserId,
+                                    reply.Answer.AnswerDate,
+                                    reply.Answer.IsCompleted
+                                );
                             }
                             else
                             {
@@ -159,6 +179,7 @@ namespace JournalGrpcService.Services
 
             return reply;
         }
+
 
         // Post a new reflection question
         public override async Task<PostReflectionQuestionReply> PostReflectionQuestion(PostReflectionQuestionRequest request, ServerCallContext context)
@@ -242,5 +263,119 @@ namespace JournalGrpcService.Services
 
             return reply;
         }
+
+        public override async Task<UpdateReflectionQuestionActiveReply> UpdateReflectionQuestionActiveStatus(UpdateReflectionQuestionActiveRequest request, ServerCallContext context)
+        {
+            string connectionString = "Server=localhost;Database=master;Integrated Security=true;";
+            string query = @"
+        UPDATE ReflectionQuestions
+        SET active = @Active
+        WHERE question_id = @QuestionId";
+
+            var reply = new UpdateReflectionQuestionActiveReply();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    await connection.OpenAsync();
+                    _logger.LogInformation("Connection opened successfully.");
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@QuestionId", request.QuestionId);
+                        command.Parameters.AddWithValue("@Active", request.Active);
+
+                        int rowsAffected = await command.ExecuteNonQueryAsync();
+                        if (rowsAffected > 0)
+                        {
+                            reply.Message = $"Successfully updated the active status to {request.Active} for question ID {request.QuestionId}.";
+                            _logger.LogInformation("Updated active status to {Active} for question ID {QuestionId}.", request.Active, request.QuestionId);
+                        }
+                        else
+                        {
+                            reply.Message = "No question found with the given ID.";
+                            _logger.LogWarning("No question found with ID {QuestionId}.", request.QuestionId);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while updating the active status of the question.");
+                reply.Message = $"Error: {ex.Message}";
+            }
+
+            return reply;
+        }
+
+        public override async Task<GetReflectionAnswersByDateReply> GetReflectionAnswersByDate(GetReflectionAnswersByDateRequest request, ServerCallContext context)
+        {
+            string connectionString = "Server=localhost;Database=master;Integrated Security=true;";
+            string query = @"
+        SELECT 
+            a.answer_id, a.question_id, a.user_id, a.answer_content, a.answer_date, a.is_completed,
+            q.question_id, q.user_id, q.question_text, q.schedule_type, q.schedule_value
+        FROM ReflectionAnswers a
+        INNER JOIN ReflectionQuestions q ON a.question_id = q.question_id
+        WHERE CAST(a.answer_date AS DATE) = @Date";
+
+            var reply = new GetReflectionAnswersByDateReply();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    await connection.OpenAsync();
+                    _logger.LogInformation("Connection opened successfully.");
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Date", request.Date);
+
+                        using (var reader = await command.ExecuteReaderAsync())
+                        {
+                            while (await reader.ReadAsync())
+                            {
+                                // Populate ReflectionAnswer
+                                var answer = new ReflectionAnswer
+                                {
+                                    AnswerId = reader.GetInt32(0), // Use GetInt64 for BIGINT
+                                    QuestionId = reader.GetInt32(1), // Use GetInt64 for BIGINT
+                                    UserId = reader.GetInt32(2), // Use GetInt64 for BIGINT
+                                    AnswerContent = reader.GetString(3),
+                                    AnswerDate = reader.GetDateTime(4).ToString("yyyy-MM-dd"),
+                                    IsCompleted = reader.GetBoolean(5)
+                                };
+
+                                // Populate ReflectionQuestion
+                                var question = new ReflectionQuestion
+                                {
+                                    QuestionId = reader.GetInt64(6), // Use GetInt64 for BIGINT
+                                    UserId = reader.GetInt64(7), // Use GetInt64 for BIGINT
+                                    QuestionText = reader.GetString(8),
+                                    ScheduleType = reader.GetString(9),
+                                    ScheduleValue = reader.GetDateTime(10).ToString("yyyy-MM-dd")
+                                };
+
+                                // Add the combined object to the reply
+                                reply.AnswersWithQuestions.Add(new ReflectionAnswerWithQuestion
+                                {
+                                    Answer = answer,
+                                    Question = question
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while fetching reflection answers for date {Date}.", request.Date);
+            }
+
+            return reply;
+        }
+
     }
 }

@@ -34,11 +34,11 @@ export const Work: React.FC = () => {
         const fetchQuestions = async () => {
             try {
                 const response = await reflectionService.getReflectionQuestions(1);
-        
+
                 // Access questionsList from the response
                 const questions = response.questionsList ?? [];
                 console.log('Fetched Questions:', questions);
-        
+
                 // Map the questions to the state
                 const mappedQuestions = questions.map((q: any) => ({
                     questionId: q.questionId,
@@ -47,14 +47,13 @@ export const Work: React.FC = () => {
                     scheduleType: q.scheduleType as ScheduleType,
                     scheduleValue: q.scheduleValue,
                 }));
-        
+
                 setQuestions(mappedQuestions);
             } catch (error) {
                 console.error('Failed to fetch reflection questions:', error);
             }
         };
-        
-        
+
         fetchQuestions();
     }, []);
 
@@ -90,13 +89,42 @@ export const Work: React.FC = () => {
         }
     };
 
+    // Handle removing a reflection question
+    const handleRemoveQuestion = async (questionId: number) => {
+        try {
+            await reflectionService.updateReflectionQuestionActiveStatus(questionId, false); // Set active to false
+            setQuestions((prevQuestions) => prevQuestions.filter((q) => q.questionId !== questionId));
+        } catch (error) {
+            console.error(`Failed to remove reflection question with ID ${questionId}:`, error);
+        }
+    };
+
     return (
         <div>
             <h2>Reflection Questions</h2>
             <ul>
                 {questions.map((question) => (
-                    <li key={question.questionId}>
-                        {question.questionText} ({question.scheduleType} - {question.scheduleValue})
+                    <li key={question.questionId} style={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
+                        <span style={{ flexGrow: 1 }}>
+                            {question.questionText} ({question.scheduleType} - {question.scheduleValue})
+                        </span>
+                        <button
+                            onClick={() => handleRemoveQuestion(question.questionId)}
+                            style={{
+                                backgroundColor: 'red',
+                                color: 'white',
+                                border: 'none',
+                                borderRadius: '50%',
+                                width: '24px',
+                                height: '24px',
+                                cursor: 'pointer',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                            }}
+                        >
+                            &times;
+                        </button>
                     </li>
                 ))}
             </ul>

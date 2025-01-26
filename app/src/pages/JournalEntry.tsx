@@ -1,53 +1,82 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import JournalService from '../services/journal-service';
+import ReflectionService from '../services/reflection-service';
 
 export const JournalEntry: React.FC = () => {
   const location = useLocation();
   const query = new URLSearchParams(location.search);
 
-  // Get initial values from query parameters
   const initialDate = query.get('date');
   const initialTitle = query.get('title') || '';
   const initialContent = query.get('content') || '';
   const initialId = query.get('id') ? Number(query.get('id')) : undefined;
 
-  // State hooks
   const [title, setTitle] = useState(initialTitle);
   const [entry, setEntry] = useState(initialContent);
+  const [questionsAndAnswers, setQuestionsAndAnswers] = useState<any[]>([]);
   const journalService = new JournalService();
+  const reflectionService = new ReflectionService();
 
-  // Debug logs
-  console.log("Date:", initialDate);
-  console.log("Title:", initialTitle);
-  console.log("Content:", initialContent);
-  console.log("Entry Id:", initialId);
+  useEffect(() => {
+    const fetchQuestionsAndAnswers = async () => {
+      if (!initialDate) {
+        console.warn('Initial date is null or undefined.');
+        return;
+      }
 
-  // Handle Save Button
+      try {
+        console.log(`Fetching questions and answers for date: ${initialDate}`);
+        const response = await reflectionService.getReflectionAnswersByDate(initialDate);
+
+        console.log("Raw backend response:", response);
+
+        const answersWithQuestions = Array.isArray(response)
+          ? response 
+          : response.answersWithQuestionsList || []; // Fallback to an empty array
+
+        console.log("Mapped Questions and Answers:", answersWithQuestions);
+
+        // Update state with the processed data
+        setQuestionsAndAnswers(answersWithQuestions);
+      } catch (error) {
+        console.error(`Failed to fetch questions and answers for date ${initialDate}:`, error);
+      }
+    };
+
+    fetchQuestionsAndAnswers();
+  }, [initialDate]);
+
   const handleSave = async () => {
     if (!title.trim() || !entry.trim()) {
       alert('Title and entry cannot be empty.');
       return;
     }
-  
+
     try {
-      // Assuming userId is hardcoded for now
       const userId = 1;
-  
-      // Use the current date if initialDate is not provided
       const entryDate = initialDate || new Date().toISOString();
-  
-      // If initialId exists, update the entry; otherwise, create a new entry
-      const response = await journalService.postJournalEntry(userId, title, entry, entryDate, initialId);
+
+      console.log(
+        `Saving journal entry. title: "${title}". entry: "${entry}". date: "${entryDate}"`
+      );
+      const response = await journalService.postJournalEntry(
+        userId,
+        title,
+        entry,
+        entryDate,
+        initialId
+      );
       console.log('Save successful:', response);
-  
+
       alert('Journal entry saved successfully!');
     } catch (error) {
       console.error('Error saving journal entry:', error);
       alert('Failed to save the journal entry.');
     }
   };
-  
+
+  console.log("Current state - questionsAndAnswers:", questionsAndAnswers);
 
   return (
     <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
@@ -82,6 +111,20 @@ export const JournalEntry: React.FC = () => {
           boxSizing: 'border-box',
         }}
       />
+
+      <h2>Questions and Answers</h2>
+      <ul>
+        {questionsAndAnswers.length > 0 ? (
+          questionsAndAnswers.map((qa, index) => (
+            <li key={index} style={{ marginBottom: '10px' }}>
+              <strong>Question:</strong> {qa.question.questionText} <br />
+              <strong>Answer:</strong> {qa.answer.answerContent || 'No answer provided'}
+            </li>
+          ))
+        ) : (
+          <p>No questions or answers for this date.</p>
+        )}
+      </ul>
 
       <button
         type="button"

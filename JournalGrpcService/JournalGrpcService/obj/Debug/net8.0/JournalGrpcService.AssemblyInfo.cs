@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JournalGrpcService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eefb575c415e8671f91a8cacbfe7d5a8d56d995e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1818ba7160b619f6d463b9cd65405f84512fc7a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("JournalGrpcService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JournalGrpcService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

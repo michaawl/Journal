@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option csharp_namespace = "JournalGrpcService";
+
 service Journal {
 
   rpc GetJournalEntries(GetJournalEntriesRequest) returns (GetJournalEntriesReply);
@@ -7,10 +9,6 @@ service Journal {
   rpc GetJournalEntry(GetJournalEntryRequest) returns (GetJournalEntryReply);
 
   rpc PostJournalEntry(PostJournalEntryRequest) returns (PostJournalEntryReply);
-
-  rpc GetReflectionAnswers(GetReflectionAnswersRequest) returns (GetReflectionAnswersReply);
-
-  rpc GetReflectionQuestions(GetReflectionQuestionsRequest) returns (GetReflectionQuestionsReply);
 
   rpc GetUsers(GetUsersRequest) returns (GetUsersReply);
 }
@@ -29,7 +27,7 @@ message JournalEntryReply {
   int64 entry_id = 1;       
   string entry_title = 2;   
   string entry_content = 3; 
-  string entry_date = 4;    
+  string entry_date = 4;   
 }
 
 message GetJournalEntryRequest {
@@ -46,54 +44,14 @@ message PostJournalEntryRequest {
   int64 user_id = 1;
   string entry_title = 2;
   string entry_content = 3;
-  string entry_date = 4;        // Entry date as a string (e.g., "2025-01-11 12:00:00")
-  optional int64 entry_id = 5;  // Optional field for update scenarios
+  string entry_date = 4;        // e.g., "2025-01-11 12:00:00"
+  optional int64 entry_id = 5;  
 }
 
 
 message PostJournalEntryReply {
   string message = 1;
 }
-
-// Reflection Answers messages
-message GetReflectionAnswersRequest {
-  int64 user_id = 1;
-}
-
-message GetReflectionAnswersReply {
-  repeated ReflectionAnswerReply answers = 1;
-}
-
-message ReflectionAnswerReply {
-  int64 answer_id = 1;
-  int64 user_id = 2;
-  int64 question_id = 3;
-  string scheduled_date = 4;
-  string answer_date = 5;
-  string answer_content = 6;
-  bool is_completed = 7;
-}
-
-// Reflection Questions messages
-message GetReflectionQuestionsRequest {
-  int64 user_id = 1;
-}
-
-message GetReflectionQuestionsReply {
-  repeated ReflectionQuestionReply questions = 1;
-}
-
-message ReflectionQuestionReply {
-  int64 question_id = 1;
-  int64 user_id = 2;
-  string question_text = 3;
-  string schedule_type = 4;
-  string schedule_value = 5;
-  int64 created_at = 6;
-  bool is_answered = 7;  // Add this field
-}
-
-
 
 // Users messages
 message GetUsersRequest {

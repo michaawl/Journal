@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import { useNavigate } from 'react-router-dom';
 import JournalService from '../services/journal-service';
+import ReflectionService from '../services/reflection-service';
 
 interface CalendarEvent {
   displayTitle: string;
   actualTitle: string;
-  entryId: number;
-  content: string;
+  entryId?: number;
+  content?: string;
   date: string;
   allDay: boolean;
 }
@@ -19,28 +19,22 @@ export const Calendar: React.FC = () => {
   const [events, setEvents] = useState<CalendarEvent[]>([]);
   const navigate = useNavigate();
   const journalService = new JournalService();
-
-  //const handleDateClick = (arg: { dateStr: string }) => {
-  //  navigate(`/journalEntry?date=${arg.dateStr}`);
-  //};
+  const reflectionService = new ReflectionService();
 
   const handleDateClick = (arg: { dateStr: string }) => {
-
     console.log("Clicked Date:", arg.dateStr);
 
     const selectedEvent = events.find((event) => {
       const eventDate = event.date.split(' ')[0]; // Strips the time part
       console.log("Comparing:", eventDate, "with", arg.dateStr);
-      return eventDate === arg.dateStr;
+      return eventDate === arg.dateStr && event.actualTitle !== "Q";
     });
 
     if (selectedEvent) {
-      // Navigate with the event details
       navigate(
-        `/journalEntry?date=${arg.dateStr}&title=${encodeURIComponent(selectedEvent.actualTitle)}&content=${encodeURIComponent(selectedEvent.content)}&id=${selectedEvent.entryId}`
+        `/journalEntry?date=${arg.dateStr}&title=${encodeURIComponent(selectedEvent.actualTitle)}&content=${encodeURIComponent(selectedEvent.content || '')}&id=${selectedEvent.entryId || ''}`
       );
     } else {
-      // If no event, just navigate to the date
       navigate(`/journalEntry?date=${arg.dateStr}`);
     }
   };
@@ -48,43 +42,87 @@ export const Calendar: React.FC = () => {
   const fetchJournalEntries = async (userId: number) => {
     try {
       const response = await journalService.getJournalEntries(userId);
-    
       const journalEntries = response.entriesList || [];
 
       const formattedEvents = journalEntries.map((entry: any) => ({
-        displayTitle: "Journal Entry", 
+        displayTitle: "Journal Entry",
         actualTitle: entry.entryTitle,
         entryId: entry.entryId,
         content: entry.entryContent,
         date: entry.entryDate.split('T')[0],
-        allDay: true, //füranzeige
+        allDay: true,
       }));
 
-      setEvents(formattedEvents);
+      return formattedEvents;
     } catch (error) {
       console.error('Error fetching journal entries:', error);
+      return [];
     }
   };
-  
-    useEffect(() => {
-      const userId = 1; // HARDCODED!!
-      fetchJournalEntries(userId);
-    }, []);
+
+  const fetchReflectionAnswersByDates = async (dates: string[]) => {
+    const reflectionEvents: CalendarEvent[] = [];
+    for (const date of dates) {
+      try {
+        const response = await reflectionService.getReflectionAnswersByDate(date);
+
+        if (response.length > 0) {
+          reflectionEvents.push({
+            displayTitle: "Q",
+            actualTitle: "Q",
+            date: date,
+            allDay: true,
+          });
+        }
+      } catch (error) {
+        console.error(`Error fetching reflection answers for date ${date}:`, error);
+      }
+    }
+    return reflectionEvents;
+  };
+
+  const loadEventsForVisibleDates = async (startDate: string, endDate: string) => {
+    const userId = 1; // HARDCODED!!
+
+    try {
+      const journalEvents = await fetchJournalEntries(userId);
+
+      const dates = [];
+      let currentDate = new Date(startDate);
+      const end = new Date(endDate);
+
+      while (currentDate <= end) {
+        dates.push(currentDate.toISOString().split('T')[0]); // Format YYYY-MM-DD
+        currentDate.setDate(currentDate.getDate() + 1);
+      }
+
+      const reflectionEvents = await fetchReflectionAnswersByDates(dates);
+
+      setEvents([...journalEvents, ...reflectionEvents]);
+    } catch (error) {
+      console.error("Error loading events for visible dates:", error);
+    }
+  };
 
   return (
     <div>
       <FullCalendar
-       plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]} 
-       initialView="dayGridMonth" 
-       dateClick={handleDateClick}
-       events={events.map(event => ({
-        title: event.displayTitle,
-        date: event.date,
-        allDay: event.allDay,
-      }))}
-       eventDisplay='list-item'
-       />cd
+        plugins={[dayGridPlugin, interactionPlugin]}
+        initialView="dayGridMonth"
+        dateClick={handleDateClick}
+        events={events.map((event) => ({
+          title: event.displayTitle,
+          date: event.date,
+          allDay: event.allDay,
+          color: event.displayTitle === "Q" ? "#FFA500" : undefined,
+        }))}
+        eventDisplay="list-item" 
+        datesSet={(arg) => {
+          const startDate = arg.startStr; 
+          const endDate = arg.endStr;
+          loadEventsForVisibleDates(startDate, endDate);
+        }}
+      />
     </div>
   );
-}
-
+};

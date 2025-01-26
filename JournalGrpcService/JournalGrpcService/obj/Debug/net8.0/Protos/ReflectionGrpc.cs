@@ -68,6 +68,14 @@ namespace ReflectionGrpcService {
     static readonly grpc::Marshaller<global::ReflectionGrpcService.PostReflectionAnswerRequest> __Marshaller_PostReflectionAnswerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ReflectionGrpcService.PostReflectionAnswerRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::ReflectionGrpcService.PostReflectionAnswerReply> __Marshaller_PostReflectionAnswerReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ReflectionGrpcService.PostReflectionAnswerReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ReflectionGrpcService.UpdateReflectionQuestionActiveRequest> __Marshaller_UpdateReflectionQuestionActiveRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ReflectionGrpcService.UpdateReflectionQuestionActiveRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ReflectionGrpcService.UpdateReflectionQuestionActiveReply> __Marshaller_UpdateReflectionQuestionActiveReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ReflectionGrpcService.UpdateReflectionQuestionActiveReply.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ReflectionGrpcService.GetReflectionAnswersByDateRequest> __Marshaller_GetReflectionAnswersByDateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ReflectionGrpcService.GetReflectionAnswersByDateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::ReflectionGrpcService.GetReflectionAnswersByDateReply> __Marshaller_GetReflectionAnswersByDateReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ReflectionGrpcService.GetReflectionAnswersByDateReply.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::ReflectionGrpcService.GetReflectionQuestionsRequest, global::ReflectionGrpcService.GetReflectionQuestionsReply> __Method_GetReflectionQuestions = new grpc::Method<global::ReflectionGrpcService.GetReflectionQuestionsRequest, global::ReflectionGrpcService.GetReflectionQuestionsReply>(
@@ -108,6 +116,22 @@ namespace ReflectionGrpcService {
         "PostReflectionAnswer",
         __Marshaller_PostReflectionAnswerRequest,
         __Marshaller_PostReflectionAnswerReply);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ReflectionGrpcService.UpdateReflectionQuestionActiveRequest, global::ReflectionGrpcService.UpdateReflectionQuestionActiveReply> __Method_UpdateReflectionQuestionActiveStatus = new grpc::Method<global::ReflectionGrpcService.UpdateReflectionQuestionActiveRequest, global::ReflectionGrpcService.UpdateReflectionQuestionActiveReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateReflectionQuestionActiveStatus",
+        __Marshaller_UpdateReflectionQuestionActiveRequest,
+        __Marshaller_UpdateReflectionQuestionActiveReply);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ReflectionGrpcService.GetReflectionAnswersByDateRequest, global::ReflectionGrpcService.GetReflectionAnswersByDateReply> __Method_GetReflectionAnswersByDate = new grpc::Method<global::ReflectionGrpcService.GetReflectionAnswersByDateRequest, global::ReflectionGrpcService.GetReflectionAnswersByDateReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetReflectionAnswersByDate",
+        __Marshaller_GetReflectionAnswersByDateRequest,
+        __Marshaller_GetReflectionAnswersByDateReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -179,6 +203,30 @@ namespace ReflectionGrpcService {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Updates the active status of a reflection question
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ReflectionGrpcService.UpdateReflectionQuestionActiveReply> UpdateReflectionQuestionActiveStatus(global::ReflectionGrpcService.UpdateReflectionQuestionActiveRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves all reflection answers for a specific date
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::ReflectionGrpcService.GetReflectionAnswersByDateReply> GetReflectionAnswersByDate(global::ReflectionGrpcService.GetReflectionAnswersByDateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -191,7 +239,9 @@ namespace ReflectionGrpcService {
           .AddMethod(__Method_GetReflectionQuestionById, serviceImpl.GetReflectionQuestionById)
           .AddMethod(__Method_GetReflectionAnswerByQuestionId, serviceImpl.GetReflectionAnswerByQuestionId)
           .AddMethod(__Method_PostReflectionQuestion, serviceImpl.PostReflectionQuestion)
-          .AddMethod(__Method_PostReflectionAnswer, serviceImpl.PostReflectionAnswer).Build();
+          .AddMethod(__Method_PostReflectionAnswer, serviceImpl.PostReflectionAnswer)
+          .AddMethod(__Method_UpdateReflectionQuestionActiveStatus, serviceImpl.UpdateReflectionQuestionActiveStatus)
+          .AddMethod(__Method_GetReflectionAnswersByDate, serviceImpl.GetReflectionAnswersByDate).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -206,6 +256,8 @@ namespace ReflectionGrpcService {
       serviceBinder.AddMethod(__Method_GetReflectionAnswerByQuestionId, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdRequest, global::ReflectionGrpcService.GetReflectionAnswerByQuestionIdReply>(serviceImpl.GetReflectionAnswerByQuestionId));
       serviceBinder.AddMethod(__Method_PostReflectionQuestion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ReflectionGrpcService.PostReflectionQuestionRequest, global::ReflectionGrpcService.PostReflectionQuestionReply>(serviceImpl.PostReflectionQuestion));
       serviceBinder.AddMethod(__Method_PostReflectionAnswer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ReflectionGrpcService.PostReflectionAnswerRequest, global::ReflectionGrpcService.PostReflectionAnswerReply>(serviceImpl.PostReflectionAnswer));
+      serviceBinder.AddMethod(__Method_UpdateReflectionQuestionActiveStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ReflectionGrpcService.UpdateReflectionQuestionActiveRequest, global::ReflectionGrpcService.UpdateReflectionQuestionActiveReply>(serviceImpl.UpdateReflectionQuestionActiveStatus));
+      serviceBinder.AddMethod(__Method_GetReflectionAnswersByDate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ReflectionGrpcService.GetReflectionAnswersByDateRequest, global::ReflectionGrpcService.GetReflectionAnswersByDateReply>(serviceImpl.GetReflectionAnswersByDate));
     }
 
   }

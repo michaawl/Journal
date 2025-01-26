@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{9D7218A4-4B1B-49BA-BE1C-72E7B5A2425B}|JournalGrpcService\\JournalGrpcService.csproj|solutionrelative:journalgrpcservice\\services\\reflectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D7218A4-4B1B-49BA-BE1C-72E7B5A2425B}|JournalGrpcService\\JournalGrpcService.csproj|c:\\users\\micha\\desktop\\journal\\journalgrpcservice\\journalgrpcservice\\services\\journalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7218A4-4B1B-49BA-BE1C-72E7B5A2425B}|JournalGrpcService\\JournalGrpcService.csproj|solutionrelative:journalgrpcservice\\services\\journalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9D7218A4-4B1B-49BA-BE1C-72E7B5A2425B}|JournalGrpcService\\JournalGrpcService.csproj|c:\\users\\micha\\desktop\\journal\\journalgrpcservice\\journalgrpcservice\\protos\\reflection.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{9D7218A4-4B1B-49BA-BE1C-72E7B5A2425B}|JournalGrpcService\\JournalGrpcService.csproj|solutionrelative:journalgrpcservice\\protos\\reflection.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D7218A4-4B1B-49BA-BE1C-72E7B5A2425B}|JournalGrpcService\\JournalGrpcService.csproj|c:\\users\\micha\\desktop\\journal\\journalgrpcservice\\journalgrpcservice\\protos\\journal.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{9D7218A4-4B1B-49BA-BE1C-72E7B5A2425B}|JournalGrpcService\\JournalGrpcService.csproj|solutionrelative:journalgrpcservice\\protos\\journal.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D7218A4-4B1B-49BA-BE1C-72E7B5A2425B}|JournalGrpcService\\JournalGrpcService.csproj|c:\\users\\micha\\desktop\\journal\\journalgrpcservice\\journalgrpcservice\\services\\journalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7218A4-4B1B-49BA-BE1C-72E7B5A2425B}|JournalGrpcService\\JournalGrpcService.csproj|solutionrelative:journalgrpcservice\\services\\journalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\micha\\Desktop\\Journal\\JournalGrpcService\\JournalGrpcService\\obj\\Debug\\net8.0\\Protos\\ReflectionGrpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,27 +70,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "reflection.proto",
               "DocumentMoniker": "C:\\Users\\micha\\Desktop\\Journal\\JournalGrpcService\\JournalGrpcService\\Protos\\reflection.proto",
               "RelativeDocumentMoniker": "JournalGrpcService\\Protos\\reflection.proto",
               "ToolTip": "C:\\Users\\micha\\Desktop\\Journal\\JournalGrpcService\\JournalGrpcService\\Protos\\reflection.proto",
               "RelativeToolTip": "JournalGrpcService\\Protos\\reflection.proto",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAcwFkAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
-              "WhenOpened": "2025-01-11T19:38:10.719Z"
+              "WhenOpened": "2025-01-11T19:38:10.719Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "journal.proto",
               "DocumentMoniker": "C:\\Users\\micha\\Desktop\\Journal\\JournalGrpcService\\JournalGrpcService\\Protos\\journal.proto",
               "RelativeDocumentMoniker": "JournalGrpcService\\Protos\\journal.proto",
               "ToolTip": "C:\\Users\\micha\\Desktop\\Journal\\JournalGrpcService\\JournalGrpcService\\Protos\\journal.proto",
               "RelativeToolTip": "JournalGrpcService\\Protos\\journal.proto",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
-              "WhenOpened": "2024-12-28T18:57:22.672Z"
+              "WhenOpened": "2024-12-28T18:57:22.672Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -100,7 +102,7 @@
               "RelativeDocumentMoniker": "JournalGrpcService\\Services\\ReflectionService.cs",
               "ToolTip": "C:\\Users\\micha\\Desktop\\Journal\\JournalGrpcService\\JournalGrpcService\\Services\\ReflectionService.cs",
               "RelativeToolTip": "JournalGrpcService\\Services\\ReflectionService.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAuwJsAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH0BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-11T20:28:20.305Z",
               "EditorCaption": ""
@@ -119,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "JournalService.cs",
               "DocumentMoniker": "C:\\Users\\micha\\Desktop\\Journal\\JournalGrpcService\\JournalGrpcService\\Services\\JournalService.cs",
               "RelativeDocumentMoniker": "JournalGrpcService\\Services\\JournalService.cs",

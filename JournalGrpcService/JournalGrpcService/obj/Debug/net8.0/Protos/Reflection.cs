@@ -47,18 +47,32 @@ namespace ReflectionGrpcService {
             "EFJlZmxlY3Rpb25BbnN3ZXISEQoJYW5zd2VyX2lkGAEgASgDEhMKC3F1ZXN0",
             "aW9uX2lkGAIgASgDEg8KB3VzZXJfaWQYAyABKAMSFgoOYW5zd2VyX2NvbnRl",
             "bnQYBCABKAkSEwoLYW5zd2VyX2RhdGUYBSABKAkSFAoMaXNfY29tcGxldGVk",
-            "GAYgASgIMuIDCgpSZWZsZWN0aW9uElYKFkdldFJlZmxlY3Rpb25RdWVzdGlv",
-            "bnMSHi5HZXRSZWZsZWN0aW9uUXVlc3Rpb25zUmVxdWVzdBocLkdldFJlZmxl",
-            "Y3Rpb25RdWVzdGlvbnNSZXBseRJfChlHZXRSZWZsZWN0aW9uUXVlc3Rpb25C",
-            "eUlkEiEuR2V0UmVmbGVjdGlvblF1ZXN0aW9uQnlJZFJlcXVlc3QaHy5HZXRS",
-            "ZWZsZWN0aW9uUXVlc3Rpb25CeUlkUmVwbHkScQofR2V0UmVmbGVjdGlvbkFu",
-            "c3dlckJ5UXVlc3Rpb25JZBInLkdldFJlZmxlY3Rpb25BbnN3ZXJCeVF1ZXN0",
-            "aW9uSWRSZXF1ZXN0GiUuR2V0UmVmbGVjdGlvbkFuc3dlckJ5UXVlc3Rpb25J",
-            "ZFJlcGx5ElYKFlBvc3RSZWZsZWN0aW9uUXVlc3Rpb24SHi5Qb3N0UmVmbGVj",
-            "dGlvblF1ZXN0aW9uUmVxdWVzdBocLlBvc3RSZWZsZWN0aW9uUXVlc3Rpb25S",
-            "ZXBseRJQChRQb3N0UmVmbGVjdGlvbkFuc3dlchIcLlBvc3RSZWZsZWN0aW9u",
-            "QW5zd2VyUmVxdWVzdBoaLlBvc3RSZWZsZWN0aW9uQW5zd2VyUmVwbHlCGKoC",
-            "FVJlZmxlY3Rpb25HcnBjU2VydmljZWIGcHJvdG8z"));
+            "GAYgASgIIkwKJVVwZGF0ZVJlZmxlY3Rpb25RdWVzdGlvbkFjdGl2ZVJlcXVl",
+            "c3QSEwoLcXVlc3Rpb25faWQYASABKAMSDgoGYWN0aXZlGAIgASgIIjYKI1Vw",
+            "ZGF0ZVJlZmxlY3Rpb25RdWVzdGlvbkFjdGl2ZVJlcGx5Eg8KB21lc3NhZ2UY",
+            "ASABKAkiMQohR2V0UmVmbGVjdGlvbkFuc3dlcnNCeURhdGVSZXF1ZXN0EgwK",
+            "BGRhdGUYASABKAkiYAofR2V0UmVmbGVjdGlvbkFuc3dlcnNCeURhdGVSZXBs",
+            "eRI9ChZhbnN3ZXJzX3dpdGhfcXVlc3Rpb25zGAEgAygLMh0uUmVmbGVjdGlv",
+            "bkFuc3dlcldpdGhRdWVzdGlvbiJoChxSZWZsZWN0aW9uQW5zd2VyV2l0aFF1",
+            "ZXN0aW9uEiEKBmFuc3dlchgBIAEoCzIRLlJlZmxlY3Rpb25BbnN3ZXISJQoI",
+            "cXVlc3Rpb24YAiABKAsyEy5SZWZsZWN0aW9uUXVlc3Rpb24yvAUKClJlZmxl",
+            "Y3Rpb24SVgoWR2V0UmVmbGVjdGlvblF1ZXN0aW9ucxIeLkdldFJlZmxlY3Rp",
+            "b25RdWVzdGlvbnNSZXF1ZXN0GhwuR2V0UmVmbGVjdGlvblF1ZXN0aW9uc1Jl",
+            "cGx5El8KGUdldFJlZmxlY3Rpb25RdWVzdGlvbkJ5SWQSIS5HZXRSZWZsZWN0",
+            "aW9uUXVlc3Rpb25CeUlkUmVxdWVzdBofLkdldFJlZmxlY3Rpb25RdWVzdGlv",
+            "bkJ5SWRSZXBseRJxCh9HZXRSZWZsZWN0aW9uQW5zd2VyQnlRdWVzdGlvbklk",
+            "EicuR2V0UmVmbGVjdGlvbkFuc3dlckJ5UXVlc3Rpb25JZFJlcXVlc3QaJS5H",
+            "ZXRSZWZsZWN0aW9uQW5zd2VyQnlRdWVzdGlvbklkUmVwbHkSVgoWUG9zdFJl",
+            "ZmxlY3Rpb25RdWVzdGlvbhIeLlBvc3RSZWZsZWN0aW9uUXVlc3Rpb25SZXF1",
+            "ZXN0GhwuUG9zdFJlZmxlY3Rpb25RdWVzdGlvblJlcGx5ElAKFFBvc3RSZWZs",
+            "ZWN0aW9uQW5zd2VyEhwuUG9zdFJlZmxlY3Rpb25BbnN3ZXJSZXF1ZXN0Ghou",
+            "UG9zdFJlZmxlY3Rpb25BbnN3ZXJSZXBseRJ0CiRVcGRhdGVSZWZsZWN0aW9u",
+            "UXVlc3Rpb25BY3RpdmVTdGF0dXMSJi5VcGRhdGVSZWZsZWN0aW9uUXVlc3Rp",
+            "b25BY3RpdmVSZXF1ZXN0GiQuVXBkYXRlUmVmbGVjdGlvblF1ZXN0aW9uQWN0",
+            "aXZlUmVwbHkSYgoaR2V0UmVmbGVjdGlvbkFuc3dlcnNCeURhdGUSIi5HZXRS",
+            "ZWZsZWN0aW9uQW5zd2Vyc0J5RGF0ZVJlcXVlc3QaIC5HZXRSZWZsZWN0aW9u",
+            "QW5zd2Vyc0J5RGF0ZVJlcGx5QhiqAhVSZWZsZWN0aW9uR3JwY1NlcnZpY2Vi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -73,7 +87,12 @@ namespace ReflectionGrpcService {
             new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.PostReflectionAnswerRequest), global::ReflectionGrpcService.PostReflectionAnswerRequest.Parser, new[]{ "QuestionId", "UserId", "AnswerContent", "AnswerDate", "IsCompleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.PostReflectionAnswerReply), global::ReflectionGrpcService.PostReflectionAnswerReply.Parser, new[]{ "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.ReflectionQuestion), global::ReflectionGrpcService.ReflectionQuestion.Parser, new[]{ "QuestionId", "UserId", "QuestionText", "ScheduleType", "ScheduleValue" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.ReflectionAnswer), global::ReflectionGrpcService.ReflectionAnswer.Parser, new[]{ "AnswerId", "QuestionId", "UserId", "AnswerContent", "AnswerDate", "IsCompleted" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.ReflectionAnswer), global::ReflectionGrpcService.ReflectionAnswer.Parser, new[]{ "AnswerId", "QuestionId", "UserId", "AnswerContent", "AnswerDate", "IsCompleted" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.UpdateReflectionQuestionActiveRequest), global::ReflectionGrpcService.UpdateReflectionQuestionActiveRequest.Parser, new[]{ "QuestionId", "Active" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.UpdateReflectionQuestionActiveReply), global::ReflectionGrpcService.UpdateReflectionQuestionActiveReply.Parser, new[]{ "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.GetReflectionAnswersByDateRequest), global::ReflectionGrpcService.GetReflectionAnswersByDateRequest.Parser, new[]{ "Date" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.GetReflectionAnswersByDateReply), global::ReflectionGrpcService.GetReflectionAnswersByDateReply.Parser, new[]{ "AnswersWithQuestions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::ReflectionGrpcService.ReflectionAnswerWithQuestion), global::ReflectionGrpcService.ReflectionAnswerWithQuestion.Parser, new[]{ "Answer", "Question" }, null, null, null, null)
           }));
     }
     #endregion
@@ -131,9 +150,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "user_id" field.</summary>
     public const int UserIdFieldNumber = 1;
     private long userId_;
-    /// <summary>
-    /// User's unique ID
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long UserId {
@@ -337,9 +353,6 @@ namespace ReflectionGrpcService {
     private static readonly pb::FieldCodec<global::ReflectionGrpcService.ReflectionQuestion> _repeated_questions_codec
         = pb::FieldCodec.ForMessage(10, global::ReflectionGrpcService.ReflectionQuestion.Parser);
     private readonly pbc::RepeatedField<global::ReflectionGrpcService.ReflectionQuestion> questions_ = new pbc::RepeatedField<global::ReflectionGrpcService.ReflectionQuestion>();
-    /// <summary>
-    /// List of reflection questions
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::ReflectionGrpcService.ReflectionQuestion> Questions {
@@ -528,9 +541,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "question_id" field.</summary>
     public const int QuestionIdFieldNumber = 1;
     private long questionId_;
-    /// <summary>
-    /// Reflection question's unique ID
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long QuestionId {
@@ -732,9 +742,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "question" field.</summary>
     public const int QuestionFieldNumber = 1;
     private global::ReflectionGrpcService.ReflectionQuestion question_;
-    /// <summary>
-    /// The reflection question
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::ReflectionGrpcService.ReflectionQuestion Question {
@@ -945,9 +952,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "question_id" field.</summary>
     public const int QuestionIdFieldNumber = 1;
     private long questionId_;
-    /// <summary>
-    /// Reflection question's unique ID
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long QuestionId {
@@ -1149,9 +1153,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "answer" field.</summary>
     public const int AnswerFieldNumber = 1;
     private global::ReflectionGrpcService.ReflectionAnswer answer_;
-    /// <summary>
-    /// The reflection answer
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::ReflectionGrpcService.ReflectionAnswer Answer {
@@ -1365,9 +1366,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "user_id" field.</summary>
     public const int UserIdFieldNumber = 1;
     private long userId_;
-    /// <summary>
-    /// User's unique ID
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long UserId {
@@ -1380,9 +1378,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "question_text" field.</summary>
     public const int QuestionTextFieldNumber = 2;
     private string questionText_ = "";
-    /// <summary>
-    /// The text of the question
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QuestionText {
@@ -1395,9 +1390,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "schedule_type" field.</summary>
     public const int ScheduleTypeFieldNumber = 3;
     private string scheduleType_ = "";
-    /// <summary>
-    /// Type of schedule (e.g., daily, weekly)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ScheduleType {
@@ -1410,9 +1402,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "schedule_value" field.</summary>
     public const int ScheduleValueFieldNumber = 4;
     private string scheduleValue_ = "";
-    /// <summary>
-    /// Schedule value (e.g., specific date/time)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ScheduleValue {
@@ -1894,9 +1883,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "question_id" field.</summary>
     public const int QuestionIdFieldNumber = 1;
     private long questionId_;
-    /// <summary>
-    /// Reflection question's unique ID
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long QuestionId {
@@ -1909,9 +1895,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "user_id" field.</summary>
     public const int UserIdFieldNumber = 2;
     private long userId_;
-    /// <summary>
-    /// User's unique ID
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long UserId {
@@ -1924,9 +1907,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "answer_content" field.</summary>
     public const int AnswerContentFieldNumber = 3;
     private string answerContent_ = "";
-    /// <summary>
-    /// Content of the answer
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AnswerContent {
@@ -1939,9 +1919,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "answer_date" field.</summary>
     public const int AnswerDateFieldNumber = 4;
     private string answerDate_ = "";
-    /// <summary>
-    /// Date of the answer
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AnswerDate {
@@ -1954,9 +1931,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "is_completed" field.</summary>
     public const int IsCompletedFieldNumber = 5;
     private bool isCompleted_;
-    /// <summary>
-    /// Whether the reflection task is completed
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IsCompleted {
@@ -2254,9 +2228,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "message" field.</summary>
     public const int MessageFieldNumber = 1;
     private string message_ = "";
-    /// <summary>
-    /// Response message
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
@@ -2462,9 +2433,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "question_id" field.</summary>
     public const int QuestionIdFieldNumber = 1;
     private long questionId_;
-    /// <summary>
-    /// Unique ID of the question
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long QuestionId {
@@ -2477,9 +2445,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "user_id" field.</summary>
     public const int UserIdFieldNumber = 2;
     private long userId_;
-    /// <summary>
-    /// User's unique ID
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long UserId {
@@ -2492,9 +2457,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "question_text" field.</summary>
     public const int QuestionTextFieldNumber = 3;
     private string questionText_ = "";
-    /// <summary>
-    /// Text of the reflection question
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QuestionText {
@@ -2507,9 +2469,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "schedule_type" field.</summary>
     public const int ScheduleTypeFieldNumber = 4;
     private string scheduleType_ = "";
-    /// <summary>
-    /// Schedule type (e.g., daily, weekly)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ScheduleType {
@@ -2522,9 +2481,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "schedule_value" field.</summary>
     public const int ScheduleValueFieldNumber = 5;
     private string scheduleValue_ = "";
-    /// <summary>
-    /// Schedule value (e.g., specific date/time)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ScheduleValue {
@@ -2827,9 +2783,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "answer_id" field.</summary>
     public const int AnswerIdFieldNumber = 1;
     private long answerId_;
-    /// <summary>
-    /// Unique ID of the answer
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long AnswerId {
@@ -2842,9 +2795,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "question_id" field.</summary>
     public const int QuestionIdFieldNumber = 2;
     private long questionId_;
-    /// <summary>
-    /// Related question's ID
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long QuestionId {
@@ -2857,9 +2807,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "user_id" field.</summary>
     public const int UserIdFieldNumber = 3;
     private long userId_;
-    /// <summary>
-    /// User's unique ID
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long UserId {
@@ -2872,9 +2819,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "answer_content" field.</summary>
     public const int AnswerContentFieldNumber = 4;
     private string answerContent_ = "";
-    /// <summary>
-    /// Content of the answer
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AnswerContent {
@@ -2887,9 +2831,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "answer_date" field.</summary>
     public const int AnswerDateFieldNumber = 5;
     private string answerDate_ = "";
-    /// <summary>
-    /// Date of the answer
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AnswerDate {
@@ -2902,9 +2843,6 @@ namespace ReflectionGrpcService {
     /// <summary>Field number for the "is_completed" field.</summary>
     public const int IsCompletedFieldNumber = 6;
     private bool isCompleted_;
-    /// <summary>
-    /// Whether the reflection task is completed
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IsCompleted {
@@ -3166,6 +3104,1101 @@ namespace ReflectionGrpcService {
           }
           case 48: {
             IsCompleted = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request to toggle the active status of a reflection question
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateReflectionQuestionActiveRequest : pb::IMessage<UpdateReflectionQuestionActiveRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateReflectionQuestionActiveRequest> _parser = new pb::MessageParser<UpdateReflectionQuestionActiveRequest>(() => new UpdateReflectionQuestionActiveRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateReflectionQuestionActiveRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateReflectionQuestionActiveRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateReflectionQuestionActiveRequest(UpdateReflectionQuestionActiveRequest other) : this() {
+      questionId_ = other.questionId_;
+      active_ = other.active_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateReflectionQuestionActiveRequest Clone() {
+      return new UpdateReflectionQuestionActiveRequest(this);
+    }
+
+    /// <summary>Field number for the "question_id" field.</summary>
+    public const int QuestionIdFieldNumber = 1;
+    private long questionId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long QuestionId {
+      get { return questionId_; }
+      set {
+        questionId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "active" field.</summary>
+    public const int ActiveFieldNumber = 2;
+    private bool active_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Active {
+      get { return active_; }
+      set {
+        active_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateReflectionQuestionActiveRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateReflectionQuestionActiveRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (QuestionId != other.QuestionId) return false;
+      if (Active != other.Active) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (QuestionId != 0L) hash ^= QuestionId.GetHashCode();
+      if (Active != false) hash ^= Active.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (QuestionId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(QuestionId);
+      }
+      if (Active != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Active);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (QuestionId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(QuestionId);
+      }
+      if (Active != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Active);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (QuestionId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(QuestionId);
+      }
+      if (Active != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateReflectionQuestionActiveRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.QuestionId != 0L) {
+        QuestionId = other.QuestionId;
+      }
+      if (other.Active != false) {
+        Active = other.Active;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            QuestionId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            Active = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            QuestionId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            Active = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Reply for updating the active status
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateReflectionQuestionActiveReply : pb::IMessage<UpdateReflectionQuestionActiveReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateReflectionQuestionActiveReply> _parser = new pb::MessageParser<UpdateReflectionQuestionActiveReply>(() => new UpdateReflectionQuestionActiveReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateReflectionQuestionActiveReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateReflectionQuestionActiveReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateReflectionQuestionActiveReply(UpdateReflectionQuestionActiveReply other) : this() {
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateReflectionQuestionActiveReply Clone() {
+      return new UpdateReflectionQuestionActiveReply(this);
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
+    /// <summary>
+    /// Response message
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateReflectionQuestionActiveReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateReflectionQuestionActiveReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateReflectionQuestionActiveReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request to get all reflection answers for a specific date
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetReflectionAnswersByDateRequest : pb::IMessage<GetReflectionAnswersByDateRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetReflectionAnswersByDateRequest> _parser = new pb::MessageParser<GetReflectionAnswersByDateRequest>(() => new GetReflectionAnswersByDateRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetReflectionAnswersByDateRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetReflectionAnswersByDateRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetReflectionAnswersByDateRequest(GetReflectionAnswersByDateRequest other) : this() {
+      date_ = other.date_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetReflectionAnswersByDateRequest Clone() {
+      return new GetReflectionAnswersByDateRequest(this);
+    }
+
+    /// <summary>Field number for the "date" field.</summary>
+    public const int DateFieldNumber = 1;
+    private string date_ = "";
+    /// <summary>
+    /// (e.g., "2025-01-25")
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Date {
+      get { return date_; }
+      set {
+        date_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetReflectionAnswersByDateRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetReflectionAnswersByDateRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Date != other.Date) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Date.Length != 0) hash ^= Date.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Date.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Date);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Date.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Date);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Date.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Date);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetReflectionAnswersByDateRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Date.Length != 0) {
+        Date = other.Date;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Date = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Date = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Reply with a list of reflection answers and their questions
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetReflectionAnswersByDateReply : pb::IMessage<GetReflectionAnswersByDateReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetReflectionAnswersByDateReply> _parser = new pb::MessageParser<GetReflectionAnswersByDateReply>(() => new GetReflectionAnswersByDateReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetReflectionAnswersByDateReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetReflectionAnswersByDateReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetReflectionAnswersByDateReply(GetReflectionAnswersByDateReply other) : this() {
+      answersWithQuestions_ = other.answersWithQuestions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetReflectionAnswersByDateReply Clone() {
+      return new GetReflectionAnswersByDateReply(this);
+    }
+
+    /// <summary>Field number for the "answers_with_questions" field.</summary>
+    public const int AnswersWithQuestionsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::ReflectionGrpcService.ReflectionAnswerWithQuestion> _repeated_answersWithQuestions_codec
+        = pb::FieldCodec.ForMessage(10, global::ReflectionGrpcService.ReflectionAnswerWithQuestion.Parser);
+    private readonly pbc::RepeatedField<global::ReflectionGrpcService.ReflectionAnswerWithQuestion> answersWithQuestions_ = new pbc::RepeatedField<global::ReflectionGrpcService.ReflectionAnswerWithQuestion>();
+    /// <summary>
+    /// List of answers with questions
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::ReflectionGrpcService.ReflectionAnswerWithQuestion> AnswersWithQuestions {
+      get { return answersWithQuestions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetReflectionAnswersByDateReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetReflectionAnswersByDateReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!answersWithQuestions_.Equals(other.answersWithQuestions_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= answersWithQuestions_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      answersWithQuestions_.WriteTo(output, _repeated_answersWithQuestions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      answersWithQuestions_.WriteTo(ref output, _repeated_answersWithQuestions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += answersWithQuestions_.CalculateSize(_repeated_answersWithQuestions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetReflectionAnswersByDateReply other) {
+      if (other == null) {
+        return;
+      }
+      answersWithQuestions_.Add(other.answersWithQuestions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            answersWithQuestions_.AddEntriesFrom(input, _repeated_answersWithQuestions_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            answersWithQuestions_.AddEntriesFrom(ref input, _repeated_answersWithQuestions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A message combining an answer and its question
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ReflectionAnswerWithQuestion : pb::IMessage<ReflectionAnswerWithQuestion>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReflectionAnswerWithQuestion> _parser = new pb::MessageParser<ReflectionAnswerWithQuestion>(() => new ReflectionAnswerWithQuestion());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReflectionAnswerWithQuestion> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::ReflectionGrpcService.ReflectionReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReflectionAnswerWithQuestion() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReflectionAnswerWithQuestion(ReflectionAnswerWithQuestion other) : this() {
+      answer_ = other.answer_ != null ? other.answer_.Clone() : null;
+      question_ = other.question_ != null ? other.question_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReflectionAnswerWithQuestion Clone() {
+      return new ReflectionAnswerWithQuestion(this);
+    }
+
+    /// <summary>Field number for the "answer" field.</summary>
+    public const int AnswerFieldNumber = 1;
+    private global::ReflectionGrpcService.ReflectionAnswer answer_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::ReflectionGrpcService.ReflectionAnswer Answer {
+      get { return answer_; }
+      set {
+        answer_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "question" field.</summary>
+    public const int QuestionFieldNumber = 2;
+    private global::ReflectionGrpcService.ReflectionQuestion question_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::ReflectionGrpcService.ReflectionQuestion Question {
+      get { return question_; }
+      set {
+        question_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReflectionAnswerWithQuestion);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReflectionAnswerWithQuestion other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Answer, other.Answer)) return false;
+      if (!object.Equals(Question, other.Question)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (answer_ != null) hash ^= Answer.GetHashCode();
+      if (question_ != null) hash ^= Question.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (answer_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Answer);
+      }
+      if (question_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Question);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (answer_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Answer);
+      }
+      if (question_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Question);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (answer_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Answer);
+      }
+      if (question_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Question);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReflectionAnswerWithQuestion other) {
+      if (other == null) {
+        return;
+      }
+      if (other.answer_ != null) {
+        if (answer_ == null) {
+          Answer = new global::ReflectionGrpcService.ReflectionAnswer();
+        }
+        Answer.MergeFrom(other.Answer);
+      }
+      if (other.question_ != null) {
+        if (question_ == null) {
+          Question = new global::ReflectionGrpcService.ReflectionQuestion();
+        }
+        Question.MergeFrom(other.Question);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (answer_ == null) {
+              Answer = new global::ReflectionGrpcService.ReflectionAnswer();
+            }
+            input.ReadMessage(Answer);
+            break;
+          }
+          case 18: {
+            if (question_ == null) {
+              Question = new global::ReflectionGrpcService.ReflectionQuestion();
+            }
+            input.ReadMessage(Question);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (answer_ == null) {
+              Answer = new global::ReflectionGrpcService.ReflectionAnswer();
+            }
+            input.ReadMessage(Answer);
+            break;
+          }
+          case 18: {
+            if (question_ == null) {
+              Question = new global::ReflectionGrpcService.ReflectionQuestion();
+            }
+            input.ReadMessage(Question);
             break;
           }
         }
